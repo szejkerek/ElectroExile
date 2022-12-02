@@ -12,8 +12,8 @@ public class EnemyBehavior : MonoBehaviour
 {
     [SerializeField] private bool isMoving = false;
     [SerializeField] private float speed = 10f;
+    [SerializeField] private float timeOfAbsorb = 3;
     [SerializeField] private Transform positionToMove;
-    private float dir = 0;
     private Vector3 startPosition;
     private Rigidbody2D rb;
 
@@ -44,19 +44,25 @@ public class EnemyBehavior : MonoBehaviour
                 rb.velocity = newVector;
             }
         }
+        if (timeOfAbsorb < 0)
+        {
+            rb.bodyType = RigidbodyType2D.Dynamic;
+            rb.mass = 10;
+            rb.gravityScale = 1;
+            
+        }
     }
     void OnTriggerEnter2D(Collider2D collider)
     {
         if (collider.gameObject.tag == "PlayerHitbox")
         {
             isMoving = false;
-            Debug.Log(collider.gameObject.name);
         }
     }
 
     void OnTriggerStay2D(Collider2D collider)
     {
-        if (collider.gameObject.tag == "PlayerHitbox")
+        if (collider.gameObject.tag == "PlayerHitbox" )
         { 
             //transform.LookAt(collider.gameObject.transform);
             var target = collider.gameObject.transform;
@@ -66,8 +72,8 @@ public class EnemyBehavior : MonoBehaviour
                 transform.position = Vector2.MoveTowards(transform.position, target.position + target.right, speed * Time.deltaTime);
 
             // transform.position += transform.forward * speed * Time.deltaTime;
+            timeOfAbsorb -= Time.deltaTime;
         }
-
     }
 
     void OnCollisionEnter2D(Collision2D collision)
@@ -76,6 +82,7 @@ public class EnemyBehavior : MonoBehaviour
         if (collision.gameObject.tag == "PlayerHitbox")
         {
             rb.AddForce(collision.GetContact(0).normal * 20 );
+            
         }
     }
 }
