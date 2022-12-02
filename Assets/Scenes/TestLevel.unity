@@ -239,6 +239,27 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &963676857 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3152007454196277971, guid: 5a3d0be6b7d73544787af303450f437a, type: 3}
+  m_PrefabInstance: {fileID: 3152007453166516252}
+  m_PrefabAsset: {fileID: 0}
+--- !u!58 &963676862
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 963676857}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.5
 --- !u!1 &984962492
 GameObject:
   m_ObjectHideFlags: 0
@@ -578,6 +599,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3152007454196277964, guid: 5a3d0be6b7d73544787af303450f437a, type: 3}
+      propertyPath: speed
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3152007454196277964, guid: 5a3d0be6b7d73544787af303450f437a, type: 3}
+      propertyPath: isMoving
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3152007454196277965, guid: 5a3d0be6b7d73544787af303450f437a, type: 3}
+      propertyPath: m_Radius
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3152007454196277965, guid: 5a3d0be6b7d73544787af303450f437a, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3152007454196277967, guid: 5a3d0be6b7d73544787af303450f437a, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -796,6 +833,10 @@ PrefabInstance:
     - target: {fileID: 639541488353785120, guid: 82fbe89e8bc72d04d9c4882e11dcaaaf, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2853383353351923152, guid: 82fbe89e8bc72d04d9c4882e11dcaaaf, type: 3}
+      propertyPath: m_Mass
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 4516593587812874979, guid: 82fbe89e8bc72d04d9c4882e11dcaaaf, type: 3}
       propertyPath: m_Name
