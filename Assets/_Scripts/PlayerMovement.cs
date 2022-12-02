@@ -25,40 +25,28 @@ public class PlayerMovement : MonoBehaviour
 
         if (!IsMouseInMovementRange())
         {
-            Debug.Log("OutOfRange");
             return;
         }
 
-        if (isMouseLeft())
+        if (isMouseLeft() || isMouseRight())
         {
-            Debug.Log("Mouse Left");
-            HorizontalMovement();
-
-        }
-
-        if (isMouseRight())
-        {
-            Debug.Log("Mouse right");
             HorizontalMovement();
         }
-
 
         if (isMouseTop())
         {
-            Debug.Log("Mouse top");
         }
 
         if (isMouseDown())
         {
-            Debug.Log("Mouse down");
         }
-        //Debug.Log(mousePosition + "  " +  transform.position);
+       
     }
 
     private void HorizontalMovement()
     {
         Vector2 dir = mousePosition - transform.position;
-        rb.velocity = new Vector2 (dir.x * speed * Time.fixedDeltaTime, 0);
+        rb.velocity = new Vector2(dir.x * speed * Time.fixedDeltaTime, 0);
     }
 
     private bool IsMouseInMovementRange()

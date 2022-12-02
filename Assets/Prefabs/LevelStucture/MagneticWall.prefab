@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8102483624557292657}
   - component: {fileID: 2146915246807569671}
-  - component: {fileID: 598385116354349654}
+  - component: {fileID: 8519650309206639868}
   m_Layer: 0
   m_Name: MagneticWall
   m_TagString: Untagged
@@ -85,7 +85,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &598385116354349654
+--- !u!61 &8519650309206639868
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

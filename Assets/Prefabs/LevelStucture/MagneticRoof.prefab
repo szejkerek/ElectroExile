@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1103562601026963412}
   - component: {fileID: 8525900086835052378}
-  - component: {fileID: 8818186088228681455}
+  - component: {fileID: 6002761267147851040}
   m_Layer: 0
   m_Name: MagneticRoof
   m_TagString: Untagged
@@ -85,7 +85,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &8818186088228681455
+--- !u!61 &6002761267147851040
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

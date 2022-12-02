@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1708379578937938610}
   - component: {fileID: 1708379578937938611}
-  - component: {fileID: 1441739377388145576}
+  - component: {fileID: 1451746384166399612}
   m_Layer: 0
   m_Name: Roof
   m_TagString: Untagged
@@ -85,7 +85,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &1441739377388145576
+--- !u!61 &1451746384166399612
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
