@@ -150,6 +150,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isMoving: 1
   speed: 1
+  positionToMove: {fileID: 0}
 --- !u!50 &963676863
 Rigidbody2D:
   serializedVersion: 4
