@@ -205,4 +205,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4da54cfa60d33a43b7f68b1b44d1a65, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  droneRange: 0
+  speed: 30.79
+  droneRangeOuter: 0.72
+  droneRangeInner: 2.49
