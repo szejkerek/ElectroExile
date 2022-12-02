@@ -62,7 +62,7 @@ public class EnemyBehavior : MonoBehaviour
 
     void OnTriggerStay2D(Collider2D collider)
     {
-        if (collider.gameObject.tag == "PlayerHitbox" )
+        if (collider.gameObject.tag == "PlayerHitbox")
         { 
             //transform.LookAt(collider.gameObject.transform);
             var target = collider.gameObject.transform;
