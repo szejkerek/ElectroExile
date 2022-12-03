@@ -27,7 +27,7 @@ public class MovablePlatform : MonoBehaviour
     {
         if (playerCollider.IsTouching(platformTrigger)/* && Input.GetKey(KeyCode.Mouse0)*/)
         {
-            if (Vector2.Distance(platform.transform.position, transform.position) >= 0.8f)
+            if (Vector2.Distance(platform.transform.position, transform.position) >= 0.5f)
                 return;
 
             moveUp = true;     
