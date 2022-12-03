@@ -14,12 +14,14 @@ public class EnemyBehavior : MonoBehaviour
     [SerializeField] private float speed = 10f;
     [SerializeField] private float timeOfAbsorb = 3;
     [SerializeField] private List<Transform> keyPoints = new List<Transform>();
+    [SerializeField] private float drainPower = 1f;
+    [SerializeField] private Sprite deadSprite;
     private int keyPointsIterator = 0;
     private Rigidbody2D rb;
     private Vector3 offset = new Vector3(0.4f,-0.2f,0f);
     private Vector3 parentOffset = new Vector3(0.6f,0f,0f);
 
-    // Start is called before the first frame update
+    // Start is called before the first frame updates
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -29,9 +31,9 @@ public class EnemyBehavior : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.localScale = new Vector3(rb.velocity.x > 0 ? 1 : -1, 1, 1);
         if (isMoving)
         {
+            transform.localScale = new Vector3(rb.velocity.x > 0 ? 1 : -1, 1, 1);
             Vector2 direction = keyPoints[keyPointsIterator].position - transform.position;
             if (direction.magnitude < 0.05f)
             {
@@ -60,12 +62,14 @@ public class EnemyBehavior : MonoBehaviour
         rb.bodyType = RigidbodyType2D.Dynamic;
         rb.mass = 10;
         rb.gravityScale = 1;
+        this.GetComponent<Animator>().enabled = false;
         transform.SetParent(null);
+        this.GetComponent<SpriteRenderer>().sprite = deadSprite;
     }
 
     void OnTriggerExit2D(Collider2D collider)
     {
-        if (collider.gameObject.tag == "Player")
+        if (collider.gameObject.tag == "Player" && timeOfAbsorb>0)
         {
             isMoving = true;
             SetDirection();
@@ -103,7 +107,12 @@ public class EnemyBehavior : MonoBehaviour
                     transform.SetParent(target);
                 }
             }
-            timeOfAbsorb -= Time.deltaTime;
+            if (transform.IsChildOf(target))
+            {
+                timeOfAbsorb -= Time.deltaTime;
+                PlayerElectricity playerElectricity = GameObject.Find("Player").GetComponent<PlayerElectricity>();
+                playerElectricity.DecrementEL(drainPower);
+            }
         }
     }
 
