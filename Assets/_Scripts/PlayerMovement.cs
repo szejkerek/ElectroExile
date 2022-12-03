@@ -35,10 +35,12 @@ public class PlayerMovement : MonoBehaviour
 
         if (isMouseTop())
         {
+            VerticalMovement();
         }
 
         if (isMouseDown())
         {
+            VerticalMovement();
         }
        
     }
@@ -46,14 +48,24 @@ public class PlayerMovement : MonoBehaviour
     private void HorizontalMovement()
     {
         Vector2 dir = mousePosition - transform.position;
-        rb.velocity = new Vector2(dir.x * speed * Time.fixedDeltaTime, 0);
+        rb.velocity = new Vector2(dir.x * speed * Time.fixedDeltaTime, rb.velocity.y);
+    }
+
+    private void VerticalMovement()
+    {
+        bool isSnapped = false;
         foreach (Transform child in transform)
         {
-            if (child.GetComponent<PlayerColliderCheck>().isColliding)
-            {
-                Debug.Log(child.name);
-            }
+            if (child.tag != "Collider")
+                continue;
+            if (!child.GetComponent<MetalCollisionCheck>().isColliding)
+                continue;
+            isSnapped = true;            
         }
+        if (!isSnapped)
+            return;
+        Vector2 dir = mousePosition - transform.position;
+        rb.velocity = new Vector2(rb.velocity.x, dir.y * speed * Time.fixedDeltaTime);
     }
 
     private bool IsMouseInMovementRange()
