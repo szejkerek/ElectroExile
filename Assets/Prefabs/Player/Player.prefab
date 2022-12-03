@@ -606,7 +606,7 @@ MonoBehaviour:
   speed: 100
   scrollMultiplier: 2
   droneRangeOuter: 0.39
-  droneRangeInner: 2.38
+  droneRangeInner: 2.79
   animator: {fileID: 0}
 --- !u!114 &6966172576497020950
 MonoBehaviour:
