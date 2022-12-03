@@ -47,7 +47,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb5ed6b393fcd694cb947053cc413bc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  electricalCost: 5
+  electricalCost: 2.5
   active: 0
   maxElectricalLevel: 100
   currentElectricalLevel: 0
