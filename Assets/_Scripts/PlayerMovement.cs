@@ -6,10 +6,19 @@ using static UnityEngine.GraphicsBuffer;
 
 public class PlayerMovement : MonoBehaviour
 {
+    [SerializeField] private float ElectricityDecrement = 1f;
+
+    [SerializeField] private MetalCollisionCheck leftCollider; 
+    [SerializeField] private MetalCollisionCheck rightCollider;
+    [SerializeField] private MetalCollisionCheck topCollider;
+    [SerializeField] private GroundCheck bottomCollider;
+    [Space]
     [SerializeField] private float speed;
+    [SerializeField] private float scrollMultiplier;
     [SerializeField] private float droneRangeOuter;
     [SerializeField] private float droneRangeInner;
 
+    PlayerElectricity playerElectricity;
     Rigidbody2D rb;
     Vector3 mousePosition;
     float distance;
@@ -17,11 +26,13 @@ public class PlayerMovement : MonoBehaviour
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
+        playerElectricity = GetComponent<PlayerElectricity>();
     }
 
     private void FixedUpdate()
     {
         mousePosition = GetMousePosition();
+
 
         if (!IsMouseInMovementRange())
         {
@@ -30,40 +41,59 @@ public class PlayerMovement : MonoBehaviour
 
         if (isMouseLeft() || isMouseRight())
         {
-            HorizontalMovement();
+            if (IsInTheAir())
+                return;
+
+            bool snapHead = TouchingHead() && HoldingMagneticKey();
+            HorizontalMovement(snapHead);
         }
 
-        if (isMouseTop())
+        if (isMouseTop() || isMouseDown())
         {
-            VerticalMovement();
-        }
-
-        if (isMouseDown())
-        {
-            VerticalMovement();
+            if (TouchingSide() && HoldingMagneticKey())
+            {     
+                VerticalMovement();
+                playerElectricity.DecrementEL(ElectricityDecrement);
+            }
         }
        
     }
 
-    private void HorizontalMovement()
+    private void HorizontalMovement(bool snapHead)
     {
         Vector2 dir = mousePosition - transform.position;
-        rb.velocity = new Vector2(dir.x * speed * Time.fixedDeltaTime, rb.velocity.y);
+        Vector2 previousPos = transform.position;
+        rb.velocity = new Vector2(dir.x * speed * Time.fixedDeltaTime, snapHead? -rb.velocity.y : rb.velocity.y);
+
+        if (snapHead)
+        {
+            rb.AddForce(Vector2.up * 20, ForceMode2D.Force);
+            playerElectricity.DecrementEL(ElectricityDecrement);
+        }
+    }
+
+    private bool IsInTheAir()
+    {
+        return !bottomCollider.isColliding && !TouchingHead();
+    }
+
+    private bool TouchingSide()
+    {
+        return (leftCollider.isColliding || rightCollider.isColliding);
+    }
+
+    private bool TouchingHead()
+    {
+        return (topCollider.isColliding);
+    }
+
+    private bool HoldingMagneticKey()
+    {
+        return Input.GetKey(KeyCode.Mouse0);
     }
 
     private void VerticalMovement()
     {
-        bool isSnapped = false;
-        foreach (Transform child in transform)
-        {
-            if (child.tag != "Collider")
-                continue;
-            if (!child.GetComponent<MetalCollisionCheck>().isColliding)
-                continue;
-            isSnapped = true;            
-        }
-        if (!isSnapped)
-            return;
         Vector2 dir = mousePosition - transform.position;
         rb.velocity = new Vector2(rb.velocity.x, dir.y * speed * Time.fixedDeltaTime);
     }
