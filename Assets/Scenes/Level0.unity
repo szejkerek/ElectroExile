@@ -1013,10 +1013,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Elevator
       objectReference: {fileID: 0}
-    - target: {fileID: 4843650333264563410, guid: 261bbe6c26672084dbb30a5a4a86734d, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 261bbe6c26672084dbb30a5a4a86734d, type: 3}
 --- !u!1001 &761405345
@@ -5376,14 +5372,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 3789586192758446947, guid: 6dfb0283aa4af044697ac0222d4e0611, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 2.82
-      objectReference: {fileID: 0}
-    - target: {fileID: 3789586192758446947, guid: 6dfb0283aa4af044697ac0222d4e0611, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 3.53
-      objectReference: {fileID: 0}
     - target: {fileID: 3877498960939733241, guid: 6dfb0283aa4af044697ac0222d4e0611, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -5431,10 +5419,6 @@ PrefabInstance:
     - target: {fileID: 6020886790403632555, guid: 6dfb0283aa4af044697ac0222d4e0611, type: 3}
       propertyPath: m_Name
       value: MovableGate
-      objectReference: {fileID: 0}
-    - target: {fileID: 8078700252749460436, guid: 6dfb0283aa4af044697ac0222d4e0611, type: 3}
-      propertyPath: speed
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6dfb0283aa4af044697ac0222d4e0611, type: 3}

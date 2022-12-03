@@ -609,8 +609,8 @@ MonoBehaviour:
   active: 0
   maxElectricalLevel: 100
   currentElectricalLevel: 0
-  rechargeRate: 25
-  disrechargeRate: 14
+  rechargeRate: 30.1
+  disrechargeRate: 11.93
   chargeSprites:
   - {fileID: 740657056, guid: 968a6c2cb39864941b62b43ea4e51c26, type: 3}
   - {fileID: -1015887099, guid: 968a6c2cb39864941b62b43ea4e51c26, type: 3}
