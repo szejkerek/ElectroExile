@@ -8,10 +8,13 @@ public class PlayerElectricity : MonoBehaviour
     [SerializeField] private float maxElectricity = 100;
     [SerializeField] private float electricityLevel;
     [SerializeField] private TextMeshProUGUI text;
+    [Space]
+    [SerializeField] private Animator animator;
 
     private void Start()
     {
         RestoreEL();
+        animator = GetComponent<Animator>();
     }
     public float ElectricityLevel { get => electricityLevel;  }
 
@@ -45,7 +48,8 @@ public class PlayerElectricity : MonoBehaviour
     }
     private void Update()
     {
-        text.text = $"{Mathf.Round(electricityLevel)}%";
+        //text.text = $"{Mathf.Round(electricityLevel)}%";
+        animator.SetFloat("Energy", electricityLevel);
     }
 
 }
