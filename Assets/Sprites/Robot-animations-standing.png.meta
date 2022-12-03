@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: deca70c8f40380242b1b68353d81acf2
+guid: f037be9f4755bea49810b2b31416c6f2
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -105,259 +105,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Tileset_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 112
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: efbbb1605a96f7e4b8badddc89056edc
-      internalID: 421350116
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Tileset_1
-      rect:
-        serializedVersion: 2
-        x: 16
-        y: 112
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9c022b5329b0e1841a5566a32200c05d
-      internalID: -1858540752
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Tileset_2
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 112
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 75e6811ec1dfeac4abaa9682e26cfdd4
-      internalID: 1624630867
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Tileset_3
-      rect:
-        serializedVersion: 2
-        x: 48
-        y: 112
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7d285e5c4cea8b942afb7a5ec3adcfd6
-      internalID: -1388269455
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Tileset_4
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 112
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c4bcf4e7467c62b41878e78e0523cf4d
-      internalID: 1713210837
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Tileset_5
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 96
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 46f04a19f756ba34884b81c9bf425565
-      internalID: -1080145088
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Tileset_6
-      rect:
-        serializedVersion: 2
-        x: 16
-        y: 96
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c42b1ff65bf51574f8425e519e8b692d
-      internalID: -1642135173
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Tileset_7
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 96
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2ce45459fb1d1be439c445162e9e40e1
-      internalID: 1241639272
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Tileset_8
-      rect:
-        serializedVersion: 2
-        x: 48
-        y: 96
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 77ff5143d32a0aa40af4634649de34de
-      internalID: 1549883538
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Tileset_9
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 96
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 63f391da2b81d464589c486adfc25e19
-      internalID: -2107314376
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Tileset_10
-      rect:
-        serializedVersion: 2
-        x: 80
-        y: 96
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 986408dec3683e14b8ceab9749e76a68
-      internalID: -1509817038
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Tileset_11
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 96
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3cfc84ecaa0c3914e8cd1638672b26f0
-      internalID: 856637389
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Tileset_12
+      name: Robot-animations-standing_0
       rect:
         serializedVersion: 2
         x: 0
@@ -371,14 +119,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e75782f10d047e941b8126d11343a5e3
-      internalID: 375308274
+      spriteID: f2243296d668ac1438af0ff8a1bdd70e
+      internalID: -77135445
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tileset_13
+      name: Robot-animations-standing_1
       rect:
         serializedVersion: 2
         x: 16
@@ -392,14 +140,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a23ff58b5399a894184a4808d5a85600
-      internalID: -1125494913
+      spriteID: 66bcd76f9a7beb44bbb445c5c0858181
+      internalID: 306035564
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tileset_14
+      name: Robot-animations-standing_2
       rect:
         serializedVersion: 2
         x: 32
@@ -413,14 +161,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0c1e2ce572d69cb4f9cb452659f98fc9
-      internalID: -1820599103
+      spriteID: af9941f20b38c344fb6c95834d391fed
+      internalID: -645132235
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tileset_15
+      name: Robot-animations-standing_3
       rect:
         serializedVersion: 2
         x: 48
@@ -434,14 +182,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e065daee7c3e6934c9df6b72eaccf034
-      internalID: 989781763
+      spriteID: f5a029354ac02ee4da6176966227278d
+      internalID: 1554602312
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tileset_16
+      name: Robot-animations-standing_4
       rect:
         serializedVersion: 2
         x: 64
@@ -455,56 +203,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b97b65cb2ac43ee479146bfd34dd3b69
-      internalID: 573453365
+      spriteID: fac35f721f2649d48b338b4fc996482f
+      internalID: 429588534
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tileset_17
-      rect:
-        serializedVersion: 2
-        x: 80
-        y: 80
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8d114957ffb633848a57cb0d4d8fe814
-      internalID: 430120323
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Tileset_18
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 80
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 93c5827b5a322d14583c5ed52861533a
-      internalID: -385208189
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Tileset_19
+      name: Robot-animations-standing_5
       rect:
         serializedVersion: 2
         x: 0
@@ -518,14 +224,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a6533bfc10937284ca890a53b382d200
-      internalID: 178602900
+      spriteID: 45d050e1190e0ac4b9b0eb6df38afffd
+      internalID: -1834742915
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tileset_20
+      name: Robot-animations-standing_6
       rect:
         serializedVersion: 2
         x: 16
@@ -539,14 +245,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9eac22f4357856d42a0cf60d28609615
-      internalID: -1028872066
+      spriteID: 8411db71c3ba5a64b99ba595266023a9
+      internalID: 2064184177
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tileset_21
+      name: Robot-animations-standing_7
       rect:
         serializedVersion: 2
         x: 32
@@ -560,14 +266,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 289d3f4bbeee0274a993bcf0abb64d1d
-      internalID: 1383721793
+      spriteID: 9df14a32e56439244ac6e8daba0dfa41
+      internalID: 1233290196
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tileset_22
+      name: Robot-animations-standing_8
       rect:
         serializedVersion: 2
         x: 48
@@ -581,14 +287,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9dc06bbf63ca9904287613534302d59a
-      internalID: 842762917
+      spriteID: f167091a40d78c947afff98e1abd2a2f
+      internalID: 369600573
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tileset_23
+      name: Robot-animations-standing_9
       rect:
         serializedVersion: 2
         x: 64
@@ -602,35 +308,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 584431e18771208439d5bc6215f64183
-      internalID: -2132734417
+      spriteID: d31b1073b45c92e4b9a0797132455c23
+      internalID: 1343802590
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tileset_24
-      rect:
-        serializedVersion: 2
-        x: 80
-        y: 64
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 43b159167b3e17b44853183c1149cddc
-      internalID: 196526278
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Tileset_25
+      name: Robot-animations-standing_10
       rect:
         serializedVersion: 2
         x: 0
@@ -644,14 +329,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 39c3ba998d6c34448be33479c75647fa
-      internalID: -375787165
+      spriteID: 857ab52c4dfda2d4a8c51b4c12f1bdfb
+      internalID: 1025649311
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tileset_26
+      name: Robot-animations-standing_11
       rect:
         serializedVersion: 2
         x: 16
@@ -665,14 +350,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fc44a0793f174624780cf50313ef9f2e
-      internalID: 2070568442
+      spriteID: 88f30bb665e208c49bd3bd8facf76164
+      internalID: -120453159
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tileset_27
+      name: Robot-animations-standing_12
       rect:
         serializedVersion: 2
         x: 32
@@ -686,14 +371,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a2968dc6c7a0ec44998724c1128d139d
-      internalID: 1615137906
+      spriteID: ec20a6a79832cb841b0a7952475f0cb8
+      internalID: -863383378
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tileset_28
+      name: Robot-animations-standing_13
       rect:
         serializedVersion: 2
         x: 48
@@ -707,14 +392,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0e4e13cd5dc0eac49bba8728538e62aa
-      internalID: 1801705565
+      spriteID: 1ffea1f93e6ff174c938040a15b1e0fc
+      internalID: 1165509827
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tileset_29
+      name: Robot-animations-standing_14
       rect:
         serializedVersion: 2
         x: 64
@@ -728,35 +413,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4daed8a6507cc9940a6719086eac2c97
-      internalID: 1825604463
+      spriteID: 76ee84d23615ca743b2b712434eb9311
+      internalID: -1836500468
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tileset_30
-      rect:
-        serializedVersion: 2
-        x: 80
-        y: 48
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 50fd6f43037e2bd48aaccbe554bc385c
-      internalID: -372580396
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Tileset_31
+      name: Robot-animations-standing_15
       rect:
         serializedVersion: 2
         x: 0
@@ -770,14 +434,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a55e5bdca52118b488886ffdeb50c13c
-      internalID: 31799710
+      spriteID: e79eb6f96f5a7484f91c64a1e1e33bf4
+      internalID: 961648669
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tileset_32
+      name: Robot-animations-standing_16
       rect:
         serializedVersion: 2
         x: 16
@@ -791,14 +455,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c4737479c3d8757418e44cca3840f791
-      internalID: -1252173202
+      spriteID: 73ef678cbac7a2c4da6891223f7d8d33
+      internalID: 280869402
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tileset_33
+      name: Robot-animations-standing_17
       rect:
         serializedVersion: 2
         x: 32
@@ -812,14 +476,56 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6f5df02f670496d4c953b53d25050089
-      internalID: 597054774
+      spriteID: 1e51f3ccc5d70674189e23df4b46c970
+      internalID: -1744080520
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tileset_34
+      name: Robot-animations-standing_18
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6904d07762efad41baa2b1c47e46285
+      internalID: 354133519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robot-animations-standing_19
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c4d3a48f3376144f8c5581c5e015c52
+      internalID: 1114520548
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robot-animations-standing_20
       rect:
         serializedVersion: 2
         x: 0
@@ -833,14 +539,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cf3f836d44c844a42b4ae850d76c4442
-      internalID: -197911313
+      spriteID: c86336ed9ed6f504ab81e7484cf966bd
+      internalID: 1410022027
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tileset_35
+      name: Robot-animations-standing_21
       rect:
         serializedVersion: 2
         x: 16
@@ -854,14 +560,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5e8aa37bc16fce74b92e38f150c1f74a
-      internalID: -106649569
+      spriteID: a2239976150f18d4eb28c715064ddf7b
+      internalID: -2071473099
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tileset_36
+      name: Robot-animations-standing_22
       rect:
         serializedVersion: 2
         x: 32
@@ -875,14 +581,56 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 66a76bfcb3649db47baccd1678634992
-      internalID: 663627881
+      spriteID: 8cb3bf597651ecb4db5a2ba282245fac
+      internalID: -1596698354
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tileset_37
+      name: Robot-animations-standing_23
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c627640ec3451c4687ae922977ab6eb
+      internalID: -757672302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robot-animations-standing_24
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c23cd88e23d866e4fa781d91c80a6a5e
+      internalID: -670598583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robot-animations-standing_25
       rect:
         serializedVersion: 2
         x: 0
@@ -896,14 +644,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: eca1a9d6ba2dce94eb0d10490208271d
-      internalID: 963777531
+      spriteID: 6540b7676d5c62842a93f34f01359fc8
+      internalID: 1673445074
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tileset_38
+      name: Robot-animations-standing_26
       rect:
         serializedVersion: 2
         x: 16
@@ -917,14 +665,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d150ba3ec93759241bba3a0cd72a76bc
-      internalID: -1605980243
+      spriteID: 10c20d3e72d9879489dda900104acba8
+      internalID: -740577293
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tileset_39
+      name: Robot-animations-standing_27
       rect:
         serializedVersion: 2
         x: 32
@@ -938,14 +686,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a6302aa6c44935d4da6f05924615ee29
-      internalID: -53227429
+      spriteID: c95a40f6cf5930849abd209eb5a41bd7
+      internalID: -321467906
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tileset_40
+      name: Robot-animations-standing_28
       rect:
         serializedVersion: 2
         x: 48
@@ -959,14 +707,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 935da9e6d5d3b26419877178c4e62812
-      internalID: 1005897081
+      spriteID: 1d7fc72042d879745bae5d0e1086937d
+      internalID: 397169297
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tileset_41
+      name: Robot-animations-standing_29
       rect:
         serializedVersion: 2
         x: 64
@@ -980,71 +728,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5f2c7e3a53e167b41a52c8f9e43d953a
-      internalID: 1603826079
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Tileset_42
-      rect:
-        serializedVersion: 2
-        x: 80
-        y: 0
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 52a3b2341505640478dfe93942033dfc
-      internalID: -2089495761
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Tileset_43
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 0
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: baa41ec619e986d4ea2dbc4ab9b80c71
-      internalID: -143333645
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Tileset_44
-      rect:
-        serializedVersion: 2
-        x: 112
-        y: 0
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f13b0c0e549db424b88c4225268765ff
-      internalID: 1641728307
+      spriteID: d3ab6e7604becd54cb18c31841625fcc
+      internalID: 90073201
       vertices: []
       indices: 
       edges: []
@@ -1060,51 +745,36 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Tileset_3: -1388269455
-      Tileset_27: 1615137906
-      Tileset_17: 430120323
-      Tileset_18: -385208189
-      Tileset_13: -1125494913
-      Tileset_25: -375787165
-      Tileset_10: -1509817038
-      Tileset_31: 31799710
-      Tileset_14: -1820599103
-      Tileset_23: -2132734417
-      Tileset_1: -1858540752
-      Tileset_5: -1080145088
-      Tileset_26: 2070568442
-      Tileset_33: 597054774
-      Tileset_15: 989781763
-      Tileset_20: -1028872066
-      Tileset_32: -1252173202
-      Tileset_22: 842762917
-      Tileset_9: -2107314376
-      Tileset_34: -197911313
-      Tileset_0: 421350116
-      Tileset_39: -53227429
-      Tileset_42: -2089495761
-      Tileset_7: 1241639272
-      Tileset_12: 375308274
-      Tileset_41: 1603826079
-      Tileset_4: 1713210837
-      Tileset_37: 963777531
-      Tileset_28: 1801705565
-      Tileset_11: 856637389
-      Tileset_19: 178602900
-      Tileset_16: 573453365
-      Tileset_35: -106649569
-      Tileset_2: 1624630867
-      Tileset_40: 1005897081
-      Tileset_29: 1825604463
-      Tileset_6: -1642135173
-      Tileset_43: -143333645
-      Tileset_38: -1605980243
-      Tileset_8: 1549883538
-      Tileset_36: 663627881
-      Tileset_24: 196526278
-      Tileset_21: 1383721793
-      Tileset_30: -372580396
-      Tileset_44: 1641728307
+      Robot-animations-standing_22: -1596698354
+      Robot-animations-standing_24: -670598583
+      Robot-animations-standing_11: -120453159
+      Robot-animations-standing_28: 397169297
+      Robot-animations-standing_27: -321467906
+      Robot-animations-standing_6: 2064184177
+      Robot-animations-standing_20: 1410022027
+      Robot-animations-standing_16: 280869402
+      Robot-animations-standing_0: -77135445
+      Robot-animations-standing_12: -863383378
+      Robot-animations-standing_15: 961648669
+      Robot-animations-standing_26: -740577293
+      Robot-animations-standing_21: -2071473099
+      Robot-animations-standing_4: 429588534
+      Robot-animations-standing_29: 90073201
+      Robot-animations-standing_2: -645132235
+      Robot-animations-standing_18: 354133519
+      Robot-animations-standing_19: 1114520548
+      Robot-animations-standing_8: 369600573
+      Robot-animations-standing_10: 1025649311
+      Robot-animations-standing_1: 306035564
+      Robot-animations-standing_5: -1834742915
+      Robot-animations-standing_13: 1165509827
+      Robot-animations-standing_17: -1744080520
+      Robot-animations-standing_9: 1343802590
+      Robot-animations-standing_25: 1673445074
+      Robot-animations-standing_14: -1836500468
+      Robot-animations-standing_3: 1554602312
+      Robot-animations-standing_23: -757672302
+      Robot-animations-standing_7: 1233290196
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
