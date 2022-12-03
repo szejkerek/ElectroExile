@@ -7,7 +7,7 @@ public class PlayerElectricity : MonoBehaviour
 {
     [SerializeField] private float maxElectricity = 100;
     [SerializeField] private float electricityLevel;
-    //[SerializeField] private TextMeshProUGUI text;
+    [SerializeField] private TextMeshProUGUI text;
 
     private void Start()
     {
@@ -45,7 +45,7 @@ public class PlayerElectricity : MonoBehaviour
     }
     private void Update()
     {
-        //text.text = $"{Mathf.Round(electricityLevel)}%";
+        text.text = $"{Mathf.Round(electricityLevel)}%";
     }
 
 }
