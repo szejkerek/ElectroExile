@@ -34,13 +34,17 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
+        
         mousePosition = GetMousePosition();
 
 
         if (!IsMouseInMovementRange())
         {
+            animator.SetFloat("Speed", 0);
             return;
         }
+
+
 
         if (isMouseLeft() || isMouseRight())
         {
@@ -67,7 +71,8 @@ public class PlayerMovement : MonoBehaviour
             playerElectricity.DecrementEL(ElectricityDecrement);
         }
 
-
+        animator.SetFloat("Speed", rb.velocity.magnitude);
+        transform.localScale = new Vector3(rb.velocity.x > 0 ? 1 : -1, 1, 1);
     }
 
     private void HorizontalMovement(bool snapHead)
@@ -75,6 +80,7 @@ public class PlayerMovement : MonoBehaviour
         Vector2 dir = mousePosition - transform.position;
         Vector2 previousPos = transform.position;
         rb.velocity = new Vector2(dir.x * speed * Time.fixedDeltaTime, snapHead? -rb.velocity.y : rb.velocity.y);
+        
     }
 
     private bool IsInTheAir()
