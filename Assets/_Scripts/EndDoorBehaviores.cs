@@ -15,10 +15,13 @@ public class EndDoorBehaviores : MonoBehaviour
     {
         if (collider.gameObject.tag == "Player")
         {
-            Debug.Log(GameObject.Find("Loader"));
-            Animator animator = GameObject.Find("Loader").GetComponent<Animator>();
-            animator.SetBool("Loading", true);
-            SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex + 1);
+            if (collider.gameObject.GetComponent<PlayerManager>().canWin == true)
+            {
+                Animator animator = GameObject.Find("Loader").GetComponent<Animator>();
+                animator.SetBool("Loading", true);
+                SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex + 1);
+            }
+            
         }
     }
 }

@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class PlayerManager : MonoBehaviour
 {
+    public bool canWin = true;
     private PlayerMovement varlM;
     private PlayerElectricity varlE;
     void Awake()
@@ -17,6 +18,7 @@ public class PlayerManager : MonoBehaviour
 
     public void KillPlayer()
     {
+        canWin = false;
         StartCoroutine(KillingPlayerAnim());     
     }
 
@@ -25,6 +27,7 @@ public class PlayerManager : MonoBehaviour
         Animator animator = GameObject.Find("Loader").GetComponent<Animator>();
         animator.SetBool("Loading", true);
         yield return new WaitForSeconds(1.0f);
+        canWin = true;
         SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex);
     }
 
