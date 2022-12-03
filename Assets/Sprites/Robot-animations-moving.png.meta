@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 907fa374cf9124740a4b531432dec93b
+guid: 20ec8755ecadbc448a5da0e4a23dc368
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -105,7 +105,175 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: backgroundSprites
+      name: Robot-animations-moving_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9ec97958dc0bbf4c89eeee2f033fc19
+      internalID: -329552796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robot-animations-moving_1
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65e7ccbd4ff8547458242acc176fc260
+      internalID: 1384822538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robot-animations-moving_2
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 732174f0002d8684c9c03a30870b29b6
+      internalID: 1651946575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robot-animations-moving_3
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa06806fa6103ea4aa550b34843f96ee
+      internalID: -1537493550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robot-animations-moving_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3822c1253b6c2c84aa2c954038b349dd
+      internalID: 1707591381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robot-animations-moving_5
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a46886063e4b7e4985fcb4851564cd5
+      internalID: -491636162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robot-animations-moving_6
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0d1bd498b671204dad922be087ba459
+      internalID: -947460178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robot-animations-moving_7
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a181f89ce9c7deb4a99f2fa3ec86cb38
+      internalID: -315770688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robot-animations-moving_8
       rect:
         serializedVersion: 2
         x: 0
@@ -113,20 +281,20 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 39ebac6db0ff6744a974d4e3dc275d2c
-      internalID: -2010538349
+      spriteID: 81a2530adedddd1499d82ff19b17d5f9
+      internalID: 1305633425
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bckg_1
+      name: Robot-animations-moving_9
       rect:
         serializedVersion: 2
         x: 16
@@ -134,20 +302,20 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6cf34105868dfb14994752b7dec661c2
-      internalID: -1882953946
+      spriteID: 9e4c7f38e19b303498ef6a581a49741f
+      internalID: 273819055
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bckg_2
+      name: Robot-animations-moving_10
       rect:
         serializedVersion: 2
         x: 32
@@ -155,20 +323,20 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 92045043e2a79f24b99d46d6ae99fa05
-      internalID: -577600514
+      spriteID: 8af1d9bdfae948e48b3db59ca22ed3e4
+      internalID: -2031367603
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bckg_3
+      name: Robot-animations-moving_11
       rect:
         serializedVersion: 2
         x: 48
@@ -176,20 +344,20 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e2809cec5a2ddf7498191287b101bbf4
-      internalID: -1023720995
+      spriteID: dda39bdbed3cbea458dfe1f303502bf6
+      internalID: -121728490
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bckg_4
+      name: Robot-animations-moving_12
       rect:
         serializedVersion: 2
         x: 0
@@ -197,20 +365,20 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c15affd1b3e7a4f4087649e09aced4d5
-      internalID: -2019419066
+      spriteID: 2068a91045a4cb54aa73ada214778d8e
+      internalID: 1084922349
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bckg_5
+      name: Robot-animations-moving_13
       rect:
         serializedVersion: 2
         x: 16
@@ -218,20 +386,20 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c0a6f2ca9b30b7e4185f52b93de6c840
-      internalID: 1719023283
+      spriteID: 139a138a1b675f44da2d1892758b132a
+      internalID: 681821290
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bckg_6
+      name: Robot-animations-moving_14
       rect:
         serializedVersion: 2
         x: 32
@@ -239,20 +407,20 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3e70bcfc810b25b4fba5209a0e817d88
-      internalID: 613233500
+      spriteID: 6e5dae3811ffc6d45ad219a0a850018f
+      internalID: 172131860
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bckg_7
+      name: Robot-animations-moving_15
       rect:
         serializedVersion: 2
         x: 48
@@ -260,20 +428,20 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b2e291f2337bbb640a47bcde3868e894
-      internalID: -1572531361
+      spriteID: a2984ef26d4d8d54f9b5b36538a85824
+      internalID: 1842471612
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bckg_8
+      name: Robot-animations-moving_16
       rect:
         serializedVersion: 2
         x: 0
@@ -281,20 +449,20 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f2ba759cf5017194087cc135218273f8
-      internalID: 856883086
+      spriteID: c06c6ab298a718e4696264db0c7a1ada
+      internalID: 1280256283
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bckg_9
+      name: Robot-animations-moving_17
       rect:
         serializedVersion: 2
         x: 16
@@ -302,20 +470,20 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 97ec34a92b8056b4f83a9d8957774a94
-      internalID: -1785359967
+      spriteID: 860fa1dce7faae34c9a8241c4c8b98a0
+      internalID: -807275650
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bckg_10
+      name: Robot-animations-moving_18
       rect:
         serializedVersion: 2
         x: 32
@@ -323,20 +491,20 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6d654cc805a8bc5459173f468f27ff0b
-      internalID: 1164203071
+      spriteID: dfc490ae017e8674ca5b7194ddb643d7
+      internalID: 1564138904
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bckg_11
+      name: Robot-animations-moving_19
       rect:
         serializedVersion: 2
         x: 48
@@ -344,20 +512,20 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bce991875b9f4924199b0e426dc7e084
-      internalID: 1907009297
+      spriteID: 2dd52968b38f6af44a1e15a5d23f213e
+      internalID: -1377710712
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bckg_12
+      name: Robot-animations-moving_20
       rect:
         serializedVersion: 2
         x: 0
@@ -365,20 +533,20 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1105c70fb5dbb2b4787dae87bd8bc1db
-      internalID: 459048558
+      spriteID: b31915febbf52374ca56e1b759aff8e0
+      internalID: 1700245997
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bckg_13
+      name: Robot-animations-moving_21
       rect:
         serializedVersion: 2
         x: 16
@@ -386,20 +554,20 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bea30910f72cda14bb68591142849b9b
-      internalID: -1667074101
+      spriteID: 3bc1efa109cc62d43abc757017306fa6
+      internalID: 1628180841
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bckg_14
+      name: Robot-animations-moving_22
       rect:
         serializedVersion: 2
         x: 32
@@ -407,20 +575,20 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 283f6f97033d6fa46aa5602278230924
-      internalID: 520358067
+      spriteID: 0bf9c055098f7814ca49a7147451d54c
+      internalID: -34151013
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bckg_15
+      name: Robot-animations-moving_23
       rect:
         serializedVersion: 2
         x: 48
@@ -428,14 +596,14 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8293a0cd229c78f4ca8ef6575c4a4c49
-      internalID: 901484531
+      spriteID: 642f070d80916a846ad21e0440824f71
+      internalID: -1660380084
       vertices: []
       indices: 
       edges: []
@@ -451,22 +619,30 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      bckg_10: 1164203071
-      bckg_9: -1785359967
-      bckg_14: 520358067
-      bckg_12: 459048558
-      bckg_1: -1882953946
-      bckg_7: -1572531361
-      bckg_15: 901484531
-      bckg_13: -1667074101
-      bckg_4: -2019419066
-      bckg_11: 1907009297
-      bckg_8: 856883086
-      bckg_3: -1023720995
-      bckg_5: 1719023283
-      bckg_6: 613233500
-      bckg_2: -577600514
-      backgroundSprites: -2010538349
+      Robot-animations-moving_20: 1700245997
+      Robot-animations-moving_22: -34151013
+      Robot-animations-moving_5: -491636162
+      Robot-animations-moving_17: -807275650
+      Robot-animations-moving_12: 1084922349
+      Robot-animations-moving_0: -329552796
+      Robot-animations-moving_4: 1707591381
+      Robot-animations-moving_19: -1377710712
+      Robot-animations-moving_1: 1384822538
+      Robot-animations-moving_23: -1660380084
+      Robot-animations-moving_6: -947460178
+      Robot-animations-moving_14: 172131860
+      Robot-animations-moving_18: 1564138904
+      Robot-animations-moving_10: -2031367603
+      Robot-animations-moving_3: -1537493550
+      Robot-animations-moving_9: 273819055
+      Robot-animations-moving_8: 1305633425
+      Robot-animations-moving_2: 1651946575
+      Robot-animations-moving_13: 681821290
+      Robot-animations-moving_11: -121728490
+      Robot-animations-moving_7: -315770688
+      Robot-animations-moving_15: 1842471612
+      Robot-animations-moving_16: 1280256283
+      Robot-animations-moving_21: 1628180841
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
