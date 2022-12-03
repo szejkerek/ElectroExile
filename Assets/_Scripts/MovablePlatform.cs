@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class MovablePlatform : MonoBehaviour
 {
-    [SerializeField] private float ElectricalDecrement;
+    [SerializeField] private float electricalDecrement;
 
 
     [SerializeField] private BoxCollider2D platformTrigger;
@@ -43,7 +43,7 @@ public class MovablePlatform : MonoBehaviour
         if (moveUp)
         {
             platform.transform.position = Vector2.Lerp(platform.transform.position, new Vector2(transform.position.x, transform.position.y + height), speed * Time.deltaTime);
-            playerElectricity.DecrementEL(ElectricalDecrement);
+            playerElectricity.DecrementEL(electricalDecrement);
         }
         else
         {
