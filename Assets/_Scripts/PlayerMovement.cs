@@ -47,6 +47,13 @@ public class PlayerMovement : MonoBehaviour
     {
         Vector2 dir = mousePosition - transform.position;
         rb.velocity = new Vector2(dir.x * speed * Time.fixedDeltaTime, 0);
+        foreach (Transform child in transform)
+        {
+            if (child.GetComponent<PlayerColliderCheck>().isColliding)
+            {
+                Debug.Log(child.name);
+            }
+        }
     }
 
     private bool IsMouseInMovementRange()
