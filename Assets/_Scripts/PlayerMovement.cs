@@ -55,8 +55,16 @@ public class PlayerMovement : MonoBehaviour
                 VerticalMovement();
                 playerElectricity.DecrementEL(ElectricityDecrement);
             }
+
         }
-       
+
+        if (TouchingHead() && HoldingMagneticKey())
+        {
+            rb.AddForce(Vector2.up * 20, ForceMode2D.Force);
+            playerElectricity.DecrementEL(ElectricityDecrement);
+        }
+
+
     }
 
     private void HorizontalMovement(bool snapHead)
@@ -64,12 +72,6 @@ public class PlayerMovement : MonoBehaviour
         Vector2 dir = mousePosition - transform.position;
         Vector2 previousPos = transform.position;
         rb.velocity = new Vector2(dir.x * speed * Time.fixedDeltaTime, snapHead? -rb.velocity.y : rb.velocity.y);
-
-        if (snapHead)
-        {
-            rb.AddForce(Vector2.up * 20, ForceMode2D.Force);
-            playerElectricity.DecrementEL(ElectricityDecrement);
-        }
     }
 
     private bool IsInTheAir()

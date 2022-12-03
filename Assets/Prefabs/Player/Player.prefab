@@ -394,7 +394,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d76b962f94aed949a1517a30b6bb1bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxElectricity: 100
+  maxElectricity: 100000
   electricityLevel: 0
   text: {fileID: 0}
 --- !u!114 &6987965075891760137
