@@ -29,7 +29,7 @@ public class PlayerElectricity : MonoBehaviour
         if(electricityLevel <= 0)
         {
             electricityLevel = 0;
-            //KILL PLAYER
+            GetComponent<PlayerManager>().KillPlayer();
         }
     }
 

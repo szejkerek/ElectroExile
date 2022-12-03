@@ -244,6 +244,7 @@ GameObject:
   - component: {fileID: 5900466589764738031}
   - component: {fileID: 4741038915478437527}
   - component: {fileID: 6966172576497020950}
+  - component: {fileID: 6987965075891760137}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -375,7 +376,7 @@ MonoBehaviour:
   rightCollider: {fileID: 894171818148453700}
   topCollider: {fileID: 6857971717853344395}
   bottomCollider: {fileID: 942720550835116008}
-  speedDefault: 70
+  speed: 0
   scrollMultiplier: 2
   droneRangeOuter: 0.72
   droneRangeInner: 2.49
@@ -393,6 +394,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxElectricity: 100
   electricityLevel: 0
+--- !u!114 &6987965075891760137
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4516593587812874979}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6604f2b9cbbe5c54fb6fdd599f7c1bed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5645448992374338181
 GameObject:
   m_ObjectHideFlags: 0
