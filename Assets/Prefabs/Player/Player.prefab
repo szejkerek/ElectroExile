@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3449178383683413453}
   - component: {fileID: 4741038915478437527}
   - component: {fileID: 3177765590953046153}
-  - component: {fileID: 8331175971468676513}
+  - component: {fileID: 5900466589764738031}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -99,7 +99,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4da54cfa60d33a43b7f68b1b44d1a65, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 35
+  speed: 70.35
   droneRangeOuter: 0.72
   droneRangeInner: 2.49
 --- !u!50 &3177765590953046153
@@ -123,8 +123,8 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!61 &8331175971468676513
-BoxCollider2D:
+--- !u!70 &5900466589764738031
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -137,15 +137,5 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 2}
-    newSize: {x: 1, y: 2}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
   m_Size: {x: 1, y: 2}
-  m_EdgeRadius: 0
+  m_Direction: 0
