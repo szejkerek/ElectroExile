@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class RechargableObject : MonoBehaviour
 {
+
+
+    [SerializeField] private float electricalCost = 1f;
     [SerializeField] private bool active = false;
 
     [SerializeField] private float maxElectricalLevel = 100;
@@ -17,6 +20,7 @@ public class RechargableObject : MonoBehaviour
     PlayerElectricity playerElectricity;
 
     public bool Active { get => active; }
+    public float CurrentElectricalLevel { get => currentElectricalLevel; }
 
     private void Awake()
     {
@@ -54,7 +58,7 @@ public class RechargableObject : MonoBehaviour
 
     private void Recharge()
     {
-        playerElectricity.DecrementEL(5);
+        playerElectricity.DecrementEL(electricalCost);
         active = true;
         currentElectricalLevel += 1 * rechargeRate * Time.deltaTime;
         if(currentElectricalLevel >= 100)
@@ -66,7 +70,7 @@ public class RechargableObject : MonoBehaviour
 
     private void Discharge()
     {
-        if(currentElectricalLevel <= 0) 
+        if(CurrentElectricalLevel <= 0) 
         {
             currentElectricalLevel = 0;
             active = false;
