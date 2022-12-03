@@ -30,21 +30,14 @@ public class PlayerMovement : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         playerElectricity = GetComponent<PlayerElectricity>();
         animator = GetComponent<Animator>();
+        animator.SetFloat("Speed", 0);
+
     }
 
     private void FixedUpdate()
     {
         
         mousePosition = GetMousePosition();
-
-
-        if (!IsMouseInMovementRange())
-        {
-            animator.SetFloat("Speed", 0);
-            return;
-        }
-
-
 
         if (isMouseLeft() || isMouseRight())
         {

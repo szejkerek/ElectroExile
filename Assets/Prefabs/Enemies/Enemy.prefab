@@ -103,9 +103,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isMoving: 1
-  speed: 1
+  speed: 0.3
   timeOfAbsorb: 8
-  keyPoints: []
+  keyPoints:
+  - {fileID: 0}
+  - {fileID: 0}
+  drainPower: 1
+  deadSprite: {fileID: 0}
 --- !u!50 &8066824660966024093
 Rigidbody2D:
   serializedVersion: 4

@@ -3,16 +3,13 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class SpikesBehavior : PlayerManager
+public class SpikesBehavior : MonoBehaviour
 {
-    void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("lol");
-        if (collision.gameObject.tag == "Player")
+        if(collision.GetComponent<Collider2D>().tag =="Player")
         {
-            //funkcja do wpisania od playera
-            Debug.Log("nice");
-            KillPlayer();   
-        }   
+            FindObjectOfType<PlayerManager>().KillPlayer();
+        }
     }
 }

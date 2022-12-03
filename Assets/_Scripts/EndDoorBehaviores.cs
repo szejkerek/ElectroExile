@@ -13,10 +13,12 @@ public class EndDoorBehaviores : MonoBehaviour
     // Start is called before the first frame update
     void OnTriggerEnter2D(Collider2D collider)
     {
-        
-        Debug.Log(GameObject.Find("Loader"));
-        Animator animator = GameObject.Find("Loader").GetComponent<Animator>();
-        animator.SetBool("Loading",true);
-        SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex+1);
+        if (collider.gameObject.tag == "Player")
+        {
+            Debug.Log(GameObject.Find("Loader"));
+            Animator animator = GameObject.Find("Loader").GetComponent<Animator>();
+            animator.SetBool("Loading", true);
+            SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex + 1);
+        }
     }
 }

@@ -14,7 +14,11 @@ public class RechargableObject : MonoBehaviour
     [SerializeField] private float rechargeRate = 10f;
     [SerializeField] private float disrechargeRate = 4f;
 
+    [SerializeField] private List<Sprite> chargeSprites;
+    [SerializeField] private GameObject battery;
+
     bool charge = false;
+    private SpriteRenderer batterySr;
 
 
     PlayerElectricity playerElectricity;
@@ -24,6 +28,7 @@ public class RechargableObject : MonoBehaviour
 
     private void Awake()
     {
+        batterySr = battery.GetComponent<SpriteRenderer>();
         playerElectricity = FindObjectOfType<PlayerElectricity>();
     }
 
@@ -37,6 +42,8 @@ public class RechargableObject : MonoBehaviour
         {
             Discharge();
         }
+        
+        battery.GetComponent<SpriteRenderer>().sprite = chargeSprites[(int)(currentElectricalLevel/17)];
     }
 
 
