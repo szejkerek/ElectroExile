@@ -6,15 +6,19 @@ using static UnityEngine.GraphicsBuffer;
 
 public class PlayerMovement : MonoBehaviour
 {
+    private float ElectricityDecrement = 0.02f;
+
     [SerializeField] private MetalCollisionCheck leftCollider;
     [SerializeField] private MetalCollisionCheck rightCollider;
     [SerializeField] private MetalCollisionCheck topCollider;
     [SerializeField] private GroundCheck bottomCollider;
     [Space]
     [SerializeField] private float speed;
+    [SerializeField] private float scrollMultiplier;
     [SerializeField] private float droneRangeOuter;
     [SerializeField] private float droneRangeInner;
 
+    PlayerElectricity playerElectricity;
     Rigidbody2D rb;
     Vector3 mousePosition;
     float distance;
@@ -22,12 +26,14 @@ public class PlayerMovement : MonoBehaviour
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
+        playerElectricity = GetComponent<PlayerElectricity>();
     }
 
     private void FixedUpdate()
     {
         mousePosition = GetMousePosition();
-        
+
+
         if (!IsMouseInMovementRange())
         {
             return;
@@ -47,6 +53,7 @@ public class PlayerMovement : MonoBehaviour
             if (TouchingSide() && HoldingMagneticKey())
             {     
                 VerticalMovement();
+                playerElectricity.DecrementEL(ElectricityDecrement);
             }
         }
        
@@ -61,6 +68,7 @@ public class PlayerMovement : MonoBehaviour
         if (snapHead)
         {
             rb.AddForce(Vector2.up * 20, ForceMode2D.Force);
+            playerElectricity.DecrementEL(ElectricityDecrement);
         }
     }
 

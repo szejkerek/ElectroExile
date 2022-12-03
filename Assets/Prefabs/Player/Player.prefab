@@ -240,9 +240,10 @@ GameObject:
   m_Component:
   - component: {fileID: 639541488353785120}
   - component: {fileID: 3449178383683413453}
-  - component: {fileID: 4741038915478437527}
   - component: {fileID: 3177765590953046153}
   - component: {fileID: 5900466589764738031}
+  - component: {fileID: 4741038915478437527}
+  - component: {fileID: 6966172576497020950}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -321,25 +322,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &4741038915478437527
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4516593587812874979}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c4da54cfa60d33a43b7f68b1b44d1a65, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  leftCollider: {fileID: 12153659877255391}
-  rightCollider: {fileID: 894171818148453700}
-  topCollider: {fileID: 6857971717853344395}
-  bottomCollider: {fileID: 942720550835116008}
-  speed: 70.35
-  droneRangeOuter: 0.72
-  droneRangeInner: 2.49
 --- !u!50 &3177765590953046153
 Rigidbody2D:
   serializedVersion: 4
@@ -377,6 +359,40 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 1, y: 2}
   m_Direction: 0
+--- !u!114 &4741038915478437527
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4516593587812874979}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4da54cfa60d33a43b7f68b1b44d1a65, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  leftCollider: {fileID: 12153659877255391}
+  rightCollider: {fileID: 894171818148453700}
+  topCollider: {fileID: 6857971717853344395}
+  bottomCollider: {fileID: 942720550835116008}
+  speedDefault: 70
+  scrollMultiplier: 2
+  droneRangeOuter: 0.72
+  droneRangeInner: 2.49
+--- !u!114 &6966172576497020950
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4516593587812874979}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d76b962f94aed949a1517a30b6bb1bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxElectricity: 100
+  electricityLevel: 0
 --- !u!1 &5645448992374338181
 GameObject:
   m_ObjectHideFlags: 0
@@ -436,7 +452,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.29890513, y: -0.289118}
+  m_Offset: {x: -0.29890513, y: -0.35444367}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -447,5 +463,5 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.56957626, y: 0.421764}
+  m_Size: {x: 0.56957626, y: 0.29111266}
   m_EdgeRadius: 0
