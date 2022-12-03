@@ -34,7 +34,7 @@ public class EnemyBehavior : MonoBehaviour
             // move left
             Vector2 dire2 =  positionToMove.position - transform.position;
             Vector2 dire = startPosition - transform.position;
-            Debug.Log($"{dire2.magnitude}, {dire.magnitude}");
+           // Debug.Log($"{dire2.magnitude}, {dire.magnitude}");
             if (dire.magnitude < 0.05f)
             {
                
@@ -108,8 +108,8 @@ public class EnemyBehavior : MonoBehaviour
 
         if (collision.gameObject.tag == "Player" && timeOfAbsorb < 0)
         {
-            var lol = collision.gameObject.GetComponent<BoxCollider2D>();
-            Physics2D.IgnoreCollision(GetComponent<BoxCollider2D>(),lol);
+            var box = collision.gameObject.GetComponent<CapsuleCollider2D>();
+            Physics2D.IgnoreCollision(GetComponent<BoxCollider2D>(),box);
         }
         OnDestrution();
     }
