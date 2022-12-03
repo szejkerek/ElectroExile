@@ -163,7 +163,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9b02830fd473c84fa85246d1c1cbe99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  durationOfText: 2
+  durationOfText: 4
   textMesh: {fileID: 7956564985921920775}
 --- !u!1 &7956564985921920769
 GameObject:

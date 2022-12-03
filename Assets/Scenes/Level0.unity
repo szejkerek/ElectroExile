@@ -187,11 +187,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 639541488353785120, guid: 82fbe89e8bc72d04d9c4882e11dcaaaf, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.95
+      value: -0.4
       objectReference: {fileID: 0}
     - target: {fileID: 639541488353785120, guid: 82fbe89e8bc72d04d9c4882e11dcaaaf, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.24
+      value: -2.27
       objectReference: {fileID: 0}
     - target: {fileID: 639541488353785120, guid: 82fbe89e8bc72d04d9c4882e11dcaaaf, type: 3}
       propertyPath: m_LocalPosition.z
@@ -388,6 +388,97 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dfdd618163ad72c48b965f2e4a06ad81, type: 3}
+--- !u!1001 &445376012
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 7956564984048066929, guid: d4773637c678c4e47a925e7ff2ac8df1, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.32
+      objectReference: {fileID: 0}
+    - target: {fileID: 7956564984048066929, guid: d4773637c678c4e47a925e7ff2ac8df1, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 7956564984791350969, guid: d4773637c678c4e47a925e7ff2ac8df1, type: 3}
+      propertyPath: m_RootOrder
+      value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 7956564984791350969, guid: d4773637c678c4e47a925e7ff2ac8df1, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.39
+      objectReference: {fileID: 0}
+    - target: {fileID: 7956564984791350969, guid: d4773637c678c4e47a925e7ff2ac8df1, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 5.59
+      objectReference: {fileID: 0}
+    - target: {fileID: 7956564984791350969, guid: d4773637c678c4e47a925e7ff2ac8df1, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.26356232
+      objectReference: {fileID: 0}
+    - target: {fileID: 7956564984791350969, guid: d4773637c678c4e47a925e7ff2ac8df1, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7956564984791350969, guid: d4773637c678c4e47a925e7ff2ac8df1, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7956564984791350969, guid: d4773637c678c4e47a925e7ff2ac8df1, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7956564984791350969, guid: d4773637c678c4e47a925e7ff2ac8df1, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7956564984791350969, guid: d4773637c678c4e47a925e7ff2ac8df1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7956564984791350969, guid: d4773637c678c4e47a925e7ff2ac8df1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7956564984791350969, guid: d4773637c678c4e47a925e7ff2ac8df1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7956564984791350970, guid: d4773637c678c4e47a925e7ff2ac8df1, type: 3}
+      propertyPath: m_Name
+      value: Guide (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7956564985921920768, guid: d4773637c678c4e47a925e7ff2ac8df1, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -158
+      objectReference: {fileID: 0}
+    - target: {fileID: 7956564985921920768, guid: d4773637c678c4e47a925e7ff2ac8df1, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -103
+      objectReference: {fileID: 0}
+    - target: {fileID: 7956564985921920775, guid: d4773637c678c4e47a925e7ff2ac8df1, type: 3}
+      propertyPath: m_text
+      value: Beware and mind the percentage of the battery power.  If the value ever
+        drops to zero you can no longer move. Stay close to the docking stations
+        to activate objects
+      objectReference: {fileID: 0}
+    - target: {fileID: 7956564985921920775, guid: d4773637c678c4e47a925e7ff2ac8df1, type: 3}
+      propertyPath: m_margin.w
+      value: -77.495384
+      objectReference: {fileID: 0}
+    - target: {fileID: 7956564985921920775, guid: d4773637c678c4e47a925e7ff2ac8df1, type: 3}
+      propertyPath: m_margin.x
+      value: -152.63562
+      objectReference: {fileID: 0}
+    - target: {fileID: 7956564985921920775, guid: d4773637c678c4e47a925e7ff2ac8df1, type: 3}
+      propertyPath: m_margin.z
+      value: -79.32316
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: d4773637c678c4e47a925e7ff2ac8df1, type: 3}
 --- !u!1 &563613687
 GameObject:
   m_ObjectHideFlags: 0
@@ -6045,6 +6136,110 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f08a205ee9091a9489e9026e162391c7, type: 3}
+--- !u!1 &1527641974
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1527641975}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1527641975
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1527641974}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.9983202, y: -2.927301, z: 0.2700826}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 15
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1669753011
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 7956564984791350969, guid: d4773637c678c4e47a925e7ff2ac8df1, type: 3}
+      propertyPath: m_RootOrder
+      value: 17
+      objectReference: {fileID: 0}
+    - target: {fileID: 7956564984791350969, guid: d4773637c678c4e47a925e7ff2ac8df1, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -4.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 7956564984791350969, guid: d4773637c678c4e47a925e7ff2ac8df1, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 5.59
+      objectReference: {fileID: 0}
+    - target: {fileID: 7956564984791350969, guid: d4773637c678c4e47a925e7ff2ac8df1, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.26356232
+      objectReference: {fileID: 0}
+    - target: {fileID: 7956564984791350969, guid: d4773637c678c4e47a925e7ff2ac8df1, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7956564984791350969, guid: d4773637c678c4e47a925e7ff2ac8df1, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7956564984791350969, guid: d4773637c678c4e47a925e7ff2ac8df1, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7956564984791350969, guid: d4773637c678c4e47a925e7ff2ac8df1, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7956564984791350969, guid: d4773637c678c4e47a925e7ff2ac8df1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7956564984791350969, guid: d4773637c678c4e47a925e7ff2ac8df1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7956564984791350969, guid: d4773637c678c4e47a925e7ff2ac8df1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7956564984791350970, guid: d4773637c678c4e47a925e7ff2ac8df1, type: 3}
+      propertyPath: m_Name
+      value: Guide (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7956564985921920768, guid: d4773637c678c4e47a925e7ff2ac8df1, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -134
+      objectReference: {fileID: 0}
+    - target: {fileID: 7956564985921920768, guid: d4773637c678c4e47a925e7ff2ac8df1, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -108
+      objectReference: {fileID: 0}
+    - target: {fileID: 7956564985921920775, guid: d4773637c678c4e47a925e7ff2ac8df1, type: 3}
+      propertyPath: m_text
+      value: The longer you stay around the device the longer it will take to discharge.
+      objectReference: {fileID: 0}
+    - target: {fileID: 7956564985921920775, guid: d4773637c678c4e47a925e7ff2ac8df1, type: 3}
+      propertyPath: m_margin.x
+      value: -152.63562
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: d4773637c678c4e47a925e7ff2ac8df1, type: 3}
 --- !u!1 &1682535411
 GameObject:
   m_ObjectHideFlags: 0
@@ -11113,3 +11308,66 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!1001 &7956564984699184555
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 7956564984791350969, guid: d4773637c678c4e47a925e7ff2ac8df1, type: 3}
+      propertyPath: m_RootOrder
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 7956564984791350969, guid: d4773637c678c4e47a925e7ff2ac8df1, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.19
+      objectReference: {fileID: 0}
+    - target: {fileID: 7956564984791350969, guid: d4773637c678c4e47a925e7ff2ac8df1, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.43
+      objectReference: {fileID: 0}
+    - target: {fileID: 7956564984791350969, guid: d4773637c678c4e47a925e7ff2ac8df1, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.26356232
+      objectReference: {fileID: 0}
+    - target: {fileID: 7956564984791350969, guid: d4773637c678c4e47a925e7ff2ac8df1, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7956564984791350969, guid: d4773637c678c4e47a925e7ff2ac8df1, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7956564984791350969, guid: d4773637c678c4e47a925e7ff2ac8df1, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7956564984791350969, guid: d4773637c678c4e47a925e7ff2ac8df1, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7956564984791350969, guid: d4773637c678c4e47a925e7ff2ac8df1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7956564984791350969, guid: d4773637c678c4e47a925e7ff2ac8df1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7956564984791350969, guid: d4773637c678c4e47a925e7ff2ac8df1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7956564984791350970, guid: d4773637c678c4e47a925e7ff2ac8df1, type: 3}
+      propertyPath: m_Name
+      value: Guide
+      objectReference: {fileID: 0}
+    - target: {fileID: 7956564985921920775, guid: d4773637c678c4e47a925e7ff2ac8df1, type: 3}
+      propertyPath: m_text
+      value: You are the last hope and a bearer of the lost battery. Bring the electricity
+        back  to the yellow door. Follow the mouse cursor. Press LMB to stick to
+        the metal
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: d4773637c678c4e47a925e7ff2ac8df1, type: 3}
