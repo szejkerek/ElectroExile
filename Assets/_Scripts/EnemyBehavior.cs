@@ -32,18 +32,24 @@ public class EnemyBehavior : MonoBehaviour
         if (isMoving)
         {
             // move left
-            if (transform.position == startPosition)
+            Vector2 dire2 =  positionToMove.position - transform.position;
+            Vector2 dire = startPosition - transform.position;
+            Debug.Log($"{dire2.magnitude}, {dire.magnitude}");
+            if (dire.magnitude < 0.05f)
             {
+               
                 Vector2 direction = positionToMove.position - transform.position;
                 Vector2 newVector = direction.normalized * speed;
                 rb.velocity = newVector;
+                this.transform.localScale = new Vector3(1, 1, 1);
             }
-            else if (transform.position == positionToMove.position)
+            else if (dire2.magnitude < 0.05f)
             {
                 // move right
                 Vector2 direction = startPosition - transform.position;
                 Vector2 newVector = direction.normalized * speed;
                 rb.velocity = newVector;
+                this.transform.localScale = new Vector3(-1, 1, 1);
             }
         }
         if (timeOfAbsorb < 0)
