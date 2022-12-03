@@ -23,8 +23,7 @@ public class EnemyBehavior : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        Vector2 newDirection = keyPoints[keyPointsIterator].position - transform.position;
-        rb.velocity = newDirection.normalized * speed;
+        SetDirection();
     }
 
     // Update is called once per frame
@@ -39,15 +38,20 @@ public class EnemyBehavior : MonoBehaviour
                 keyPointsIterator++;
                 if (keyPointsIterator >= keyPoints.Count)
                     keyPointsIterator = 0;
-
-                Vector2 newDirection = keyPoints[keyPointsIterator].position - transform.position;
-                rb.velocity = newDirection.normalized * speed;                
+                SetDirection();
+                              
             }
         }
         if (timeOfAbsorb < 0)
         {
             OnDestrution();
         }
+    }
+
+    private void SetDirection()
+    {
+        Vector2 newDirection = keyPoints[keyPointsIterator].position - transform.position;
+        rb.velocity = newDirection.normalized * speed;
     }
 
     private void OnDestrution()
@@ -57,6 +61,15 @@ public class EnemyBehavior : MonoBehaviour
         rb.mass = 10;
         rb.gravityScale = 1;
         transform.SetParent(null);
+    }
+
+    void OnTriggerExit2D(Collider2D collider)
+    {
+        if (collider.gameObject.tag == "Player")
+        {
+            isMoving = true;
+            SetDirection();
+        }
     }
 
     void OnTriggerEnter2D(Collider2D collider)
@@ -96,8 +109,6 @@ public class EnemyBehavior : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        Debug.Log("lmao");
-
         if (collision.gameObject.tag == "Player" && timeOfAbsorb < 0)
         {
             var box = collision.gameObject.GetComponent<CapsuleCollider2D>();
