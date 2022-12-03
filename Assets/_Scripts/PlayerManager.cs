@@ -16,8 +16,7 @@ public class PlayerManager : MonoBehaviour
 
     public void KillPlayer()
     {
-        StartCoroutine(KillingPlayerAnim());
-       
+        StartCoroutine(KillingPlayerAnim());     
     }
 
     private IEnumerator KillingPlayerAnim()
