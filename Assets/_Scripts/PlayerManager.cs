@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerManager : MonoBehaviour
 {
@@ -15,17 +16,18 @@ public class PlayerManager : MonoBehaviour
 
     public void KillPlayer()
     {
-        Debug.Log("jestemtu");
         StartCoroutine(KillingPlayerAnim());
-        
+       
     }
 
     private IEnumerator KillingPlayerAnim()
     {
         Debug.Log("idnqwbodiqb");
-        varlM.enabled = false; //Trun off movement
-        varlE.ZeroEL(); //Zero batery
-        yield return new WaitForSeconds(1.5f); ;
+        Debug.Log(GameObject.Find("Loader"));
+        Animator animator = GameObject.Find("Loader").GetComponent<Animator>();
+        animator.SetBool("Loading", true);
+        yield return new WaitForSeconds(1.5f);
+        SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex);
         // Wygaœ ekran
         // Zresetuj scene 
     }
