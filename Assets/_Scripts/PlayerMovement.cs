@@ -17,6 +17,8 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float scrollMultiplier;
     [SerializeField] private float droneRangeOuter;
     [SerializeField] private float droneRangeInner;
+    [Space]
+    [SerializeField] private Animator animator;
 
     PlayerElectricity playerElectricity;
     Rigidbody2D rb;
@@ -27,6 +29,7 @@ public class PlayerMovement : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         playerElectricity = GetComponent<PlayerElectricity>();
+        animator = GetComponent<Animator>();
     }
 
     private void FixedUpdate()
