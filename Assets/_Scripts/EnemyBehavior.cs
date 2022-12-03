@@ -125,6 +125,6 @@ public class EnemyBehavior : MonoBehaviour
             //Physics2D.IgnoreCollision(GetComponent<BoxCollider2D>(),box);
             StartCoroutine(deadEnumerator());
         }
-        OnDestrution();
+       // OnDestrution();
     }
 }
