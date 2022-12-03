@@ -48,7 +48,6 @@ public class PlayerElectricity : MonoBehaviour
     }
     private void Update()
     {
-        Debug.Log(Mathf.Round(electricityLevel));
         text.text = $"{Mathf.Round(electricityLevel)}%";
         animator.SetFloat("Energy", electricityLevel);
     }
