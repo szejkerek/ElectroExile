@@ -13,8 +13,8 @@ public class EnemyBehavior : MonoBehaviour
     [SerializeField] private bool isMoving = false;
     [SerializeField] private float speed = 10f;
     [SerializeField] private float timeOfAbsorb = 3;
-    [SerializeField] private Transform positionToMove;
-    private Vector3 startPosition;
+    [SerializeField] private List<Transform> keyPoints = new List<Transform>();
+    private int keyPointsIterator = 0;
     private Rigidbody2D rb;
     private Vector3 offset = new Vector3(0.4f,-0.2f,0f);
     private Vector3 parentOffset = new Vector3(0.6f,0f,0f);
@@ -22,34 +22,26 @@ public class EnemyBehavior : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        startPosition = transform.position;
         rb = GetComponent<Rigidbody2D>();
+        Vector2 newDirection = keyPoints[keyPointsIterator].position - transform.position;
+        rb.velocity = newDirection.normalized * speed;
     }
 
     // Update is called once per frame
     void Update()
     {
+        transform.localScale = new Vector3(rb.velocity.x > 0 ? 1 : -1, 1, 1);
         if (isMoving)
         {
-            // move left
-            Vector2 dire2 =  positionToMove.position - transform.position;
-            Vector2 dire = startPosition - transform.position;
-           // Debug.Log($"{dire2.magnitude}, {dire.magnitude}");
-            if (dire.magnitude < 0.05f)
+            Vector2 direction = keyPoints[keyPointsIterator].position - transform.position;
+            if (direction.magnitude < 0.05f)
             {
-               
-                Vector2 direction = positionToMove.position - transform.position;
-                Vector2 newVector = direction.normalized * speed;
-                rb.velocity = newVector;
-                this.transform.localScale = new Vector3(1, 1, 1);
-            }
-            else if (dire2.magnitude < 0.05f)
-            {
-                // move right
-                Vector2 direction = startPosition - transform.position;
-                Vector2 newVector = direction.normalized * speed;
-                rb.velocity = newVector;
-                this.transform.localScale = new Vector3(-1, 1, 1);
+                keyPointsIterator++;
+                if (keyPointsIterator >= keyPoints.Count)
+                    keyPointsIterator = 0;
+
+                Vector2 newDirection = keyPoints[keyPointsIterator].position - transform.position;
+                rb.velocity = newDirection.normalized * speed;                
             }
         }
         if (timeOfAbsorb < 0)
