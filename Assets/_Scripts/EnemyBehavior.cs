@@ -13,6 +13,7 @@ public class EnemyBehavior : MonoBehaviour
 {
     [SerializeField] private bool isMoving = false;
     [SerializeField] private float speed = 10f;
+    [SerializeField] private float acceleration = 2f;
     [SerializeField] private List<Transform> keyPoints = new List<Transform>();
     [SerializeField] private float drainPower = 1f;
     [SerializeField] private Sprite deadSprite;
@@ -86,8 +87,8 @@ public class EnemyBehavior : MonoBehaviour
             var target = collider.gameObject.transform;
             if (target.position.x > transform.position.x)
             {
-                transform.position = Vector2.MoveTowards(transform.position, target.position - target.right - offset,
-                    speed * Time.deltaTime);
+                transform.position = Vector2.MoveTowards(transform.position, target.position,
+                    speed* acceleration * Time.deltaTime);
                 if (transform.position.x >= target.position.x - target.right.x - parentOffset.x)
                 {
                     transform.SetParent(target);
@@ -95,8 +96,8 @@ public class EnemyBehavior : MonoBehaviour
             }
             else
             {
-                transform.position = Vector2.MoveTowards(transform.position, target.position + target.right + offset,
-                    speed * Time.deltaTime);
+                transform.position = Vector2.MoveTowards(transform.position, target.position ,
+                    speed* acceleration * Time.deltaTime);
                 if (transform.position.x <= target.position.x + target.right.x + parentOffset.x)
                 {
                     transform.SetParent(target);
