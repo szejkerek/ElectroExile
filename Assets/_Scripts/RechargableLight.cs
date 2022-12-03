@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering.Universal;
 
 public class RechargableLight : MonoBehaviour
 {
@@ -8,14 +9,20 @@ public class RechargableLight : MonoBehaviour
     [SerializeField] float thresholdLight;
 
     [SerializeField] RechargableObject ro;
+    [SerializeField] Light2D light;
+
+    private void Start()
+    {
+        light.intensity = 0;
+    }
+
     private void Update()
     {
-        float lightDensity = ro.CurrentElectricalLevel/100; //<- normalized value
+        float lightDensity = ro.CurrentElectricalLevel/25; //<- normalized value
 
-        if(lightDensity > 0)
-        {
-            Debug.Log("Light value: " + lightDensity);
-        }
+        Debug.Log(lightDensity);
+        light.intensity = lightDensity;
+
 
     }
 }

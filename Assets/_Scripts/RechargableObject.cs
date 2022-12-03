@@ -72,7 +72,7 @@ public class RechargableObject : MonoBehaviour
         {
             currentElectricalLevel = 100;
         }
-      
+     
     }
 
     private void Discharge()
