@@ -12,7 +12,7 @@ public class RechargableLight : MonoBehaviour
     {
         float lightDensity = ro.CurrentElectricalLevel/100; //<- normalized value
 
-        if(lightDensity > thresholdLight)
+        if(lightDensity > 0)
         {
             Debug.Log("Light value: " + lightDensity);
         }
