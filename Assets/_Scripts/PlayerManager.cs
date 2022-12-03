@@ -22,7 +22,6 @@ public class PlayerManager : MonoBehaviour
 
     private IEnumerator KillingPlayerAnim()
     {
-        Debug.Log(GameObject.Find("Loader"));
         Animator animator = GameObject.Find("Loader").GetComponent<Animator>();
         animator.SetBool("Loading", true);
         yield return new WaitForSeconds(1.0f);
