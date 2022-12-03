@@ -45,7 +45,7 @@ public class PlayerElectricity : MonoBehaviour
     }
     private void Update()
     {
-        text.text = $"{electricityLevel}%";
+        text.text = $"{Mathf.Round(electricityLevel)}%";
     }
 
 }

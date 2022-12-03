@@ -46,7 +46,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 1.61835}
+  m_Offset: {x: 0.003573954, y: 2.0186334}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -57,7 +57,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 4.2367}
+  m_Size: {x: 0.90707695, y: 3.4361334}
   m_EdgeRadius: 0
 --- !u!50 &2478377473605858924
 Rigidbody2D:
@@ -202,7 +202,7 @@ GameObject:
   - component: {fileID: 4843650333264563408}
   - component: {fileID: -3102590545489136268}
   m_Layer: 0
-  m_Name: MovablePlatform
+  m_Name: Elevator
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -237,11 +237,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 961b7e63b2ba25a41a53872a92815364, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerCollider: {fileID: 0}
+  ElectricalDecrement: 0.1
   platformTrigger: {fileID: 9121638375736333348}
   platform: {fileID: 5609185323318383882}
-  startingPlatformPositon: {x: -7.74, y: -2.75}
-  height: 6.04
+  height: 5.34
   speed: 0.7
 --- !u!1 &8991072002335193000
 GameObject:
