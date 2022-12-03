@@ -19,10 +19,7 @@ public class RechargableLight : MonoBehaviour
     private void Update()
     {
         float lightDensity = ro.CurrentElectricalLevel/25; //<- normalized value
-
-        Debug.Log(lightDensity);
         light.intensity = lightDensity;
-
 
     }
 }

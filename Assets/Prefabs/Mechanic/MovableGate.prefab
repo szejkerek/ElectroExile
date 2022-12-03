@@ -301,7 +301,7 @@ MonoBehaviour:
   ro: {fileID: 1060943045932377123}
   platform: {fileID: 6723335967841657835}
   endHeight: 4.93
-  speed: 2
+  speed: 1
 --- !u!1 &6723335967841657833
 GameObject:
   m_ObjectHideFlags: 0
@@ -559,7 +559,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8613501318007755360}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.52, y: -1.07, z: 0}
+  m_LocalPosition: {x: 2.82, y: 3.53, z: 0}
   m_LocalScale: {x: 1.0679553, y: 1.0679553, z: 1.0679553}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -605,12 +605,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb5ed6b393fcd694cb947053cc413bc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  electricalCost: 3
+  electricalCost: 4
   active: 0
   maxElectricalLevel: 100
   currentElectricalLevel: 0
-  rechargeRate: 25.08
-  disrechargeRate: 15.79
+  rechargeRate: 25
+  disrechargeRate: 14
   chargeSprites:
   - {fileID: 740657056, guid: 968a6c2cb39864941b62b43ea4e51c26, type: 3}
   - {fileID: -1015887099, guid: 968a6c2cb39864941b62b43ea4e51c26, type: 3}

@@ -440,11 +440,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 961b7e63b2ba25a41a53872a92815364, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  electricalDecrement: 0
+  electricalDecrement: 2
   platformTrigger: {fileID: 9121638375736333348}
   platform: {fileID: 5609185323318383882}
-  height: 5.28
-  speed: 0.8
+  height: 2.4
+  speed: 1.34
 --- !u!1 &5749018301430816121
 GameObject:
   m_ObjectHideFlags: 0
