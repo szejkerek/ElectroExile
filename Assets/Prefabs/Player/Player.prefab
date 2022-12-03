@@ -376,7 +376,7 @@ MonoBehaviour:
   rightCollider: {fileID: 894171818148453700}
   topCollider: {fileID: 6857971717853344395}
   bottomCollider: {fileID: 942720550835116008}
-  speed: 0
+  speed: 70
   scrollMultiplier: 2
   droneRangeOuter: 0.72
   droneRangeInner: 2.49

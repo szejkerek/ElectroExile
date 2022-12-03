@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class PlayerElectricity : MonoBehaviour
 {
     [SerializeField] private float maxElectricity = 100;
     [SerializeField] private float electricityLevel;
+    [SerializeField] private TextMeshProUGUI text;
 
     private void Start()
     {
@@ -40,6 +42,10 @@ public class PlayerElectricity : MonoBehaviour
         {
             electricityLevel = maxElectricity;
         }
+    }
+    private void Update()
+    {
+        text.text = $"{electricityLevel}%";
     }
 
 }

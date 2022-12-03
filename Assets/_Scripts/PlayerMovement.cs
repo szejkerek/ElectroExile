@@ -6,9 +6,9 @@ using static UnityEngine.GraphicsBuffer;
 
 public class PlayerMovement : MonoBehaviour
 {
-    private float ElectricityDecrement = 0.02f;
+    private float ElectricityDecrement = 1f;
 
-    [SerializeField] private MetalCollisionCheck leftCollider;
+    [SerializeField] private MetalCollisionCheck leftCollider; 
     [SerializeField] private MetalCollisionCheck rightCollider;
     [SerializeField] private MetalCollisionCheck topCollider;
     [SerializeField] private GroundCheck bottomCollider;
