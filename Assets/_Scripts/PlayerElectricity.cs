@@ -27,7 +27,7 @@ public class PlayerElectricity : MonoBehaviour
 
     public void DecrementEL(float value)
     {
-        electricityLevel -= value;
+        electricityLevel -= value * Time.deltaTime;
         if(electricityLevel <= 0)
         {
             electricityLevel = 0;
@@ -37,7 +37,7 @@ public class PlayerElectricity : MonoBehaviour
 
     public void IncrementEL(float value)
     {
-        electricityLevel += value;
+        electricityLevel += value * Time.deltaTime;
         if (electricityLevel >= maxElectricity)
         {
             electricityLevel = maxElectricity;
