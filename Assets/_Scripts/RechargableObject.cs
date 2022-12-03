@@ -55,7 +55,7 @@ public class RechargableObject : MonoBehaviour
     private void Recharge()
     {
         playerElectricity.DecrementEL(5);
-
+        active = true;
         currentElectricalLevel += 1 * rechargeRate * Time.deltaTime;
         if(currentElectricalLevel >= 100)
         {
