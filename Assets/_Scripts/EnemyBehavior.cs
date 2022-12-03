@@ -119,12 +119,6 @@ public class EnemyBehavior : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "Player")
-        {
-            //var box = collision.gameObject.GetComponent<CapsuleCollider2D>();
-            //Physics2D.IgnoreCollision(GetComponent<BoxCollider2D>(),box);
-            StartCoroutine(deadEnumerator());
-        }
-       // OnDestrution();
+        // OnDestrution();
     }
 }

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -25,9 +26,15 @@ public class PlayerManager : MonoBehaviour
         Debug.Log(GameObject.Find("Loader"));
         Animator animator = GameObject.Find("Loader").GetComponent<Animator>();
         animator.SetBool("Loading", true);
-        yield return new WaitForSeconds(1.5f);
+        yield return new WaitForSeconds(1.0f);
         SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex);
-        // Wygaœ ekran
-        // Zresetuj scene 
+    }
+
+    void OnCollisionEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Enemy")
+        {
+            KillPlayer();
+        }
     }
 }
