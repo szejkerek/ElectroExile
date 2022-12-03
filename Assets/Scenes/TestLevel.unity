@@ -587,11 +587,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4921643149875317741, guid: dfdd618163ad72c48b965f2e4a06ad81, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.47
+      value: -0.51
       objectReference: {fileID: 0}
     - target: {fileID: 4921643149875317741, guid: dfdd618163ad72c48b965f2e4a06ad81, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.29
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4921643149875317741, guid: dfdd618163ad72c48b965f2e4a06ad81, type: 3}
       propertyPath: m_LocalPosition.z
@@ -766,6 +766,14 @@ PrefabInstance:
     - target: {fileID: 2859193577084113369, guid: f08a205ee9091a9489e9026e162391c7, type: 3}
       propertyPath: m_Name
       value: Spikes
+      objectReference: {fileID: 0}
+    - target: {fileID: 2859193577084113369, guid: f08a205ee9091a9489e9026e162391c7, type: 3}
+      propertyPath: m_TagString
+      value: Spike
+      objectReference: {fileID: 0}
+    - target: {fileID: 2859193577084113371, guid: f08a205ee9091a9489e9026e162391c7, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f08a205ee9091a9489e9026e162391c7, type: 3}
@@ -1061,6 +1069,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6572283897609825168, guid: ff70319e9c93b504eb7442fcf5245dc1, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6572283897609825169, guid: ff70319e9c93b504eb7442fcf5245dc1, type: 3}
       propertyPath: m_RootOrder
       value: 10
