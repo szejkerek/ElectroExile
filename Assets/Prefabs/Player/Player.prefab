@@ -248,8 +248,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 322760636922535717}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.31, y: 0.001, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0.45088, y: -0.32017, z: 0}
+  m_LocalScale: {x: 1.462487, y: 0.5475825, z: 0.97348}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 639541488353785120}
@@ -603,10 +603,10 @@ MonoBehaviour:
   rightCollider: {fileID: 894171818148453700}
   topCollider: {fileID: 6857971717853344395}
   bottomCollider: {fileID: 942720550835116008}
-  speed: 100
+  speed: 71.18
   scrollMultiplier: 2
-  droneRangeOuter: 0.21
-  droneRangeInner: 3.31
+  droneRangeOuter: 0.56
+  droneRangeInner: 4.99
   animator: {fileID: 0}
 --- !u!114 &6966172576497020950
 MonoBehaviour:
@@ -682,8 +682,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5645448992374338181}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.19, y: 0.841, z: 0}
-  m_LocalScale: {x: 0.65, y: 1, z: 1}
+  m_LocalPosition: {x: 0.25557, y: 0.841, z: 0}
+  m_LocalScale: {x: 0.86937493, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 639541488353785120}
