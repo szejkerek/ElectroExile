@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3877498960939733241}
+  - component: {fileID: 8078700252749460436}
   m_Layer: 0
   m_Name: MovableGate
   m_TagString: Untagged
@@ -33,6 +34,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8078700252749460436
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6020886790403632555}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15fc5fd4439873440b9a386b2f063d45, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ro: {fileID: 1060943045932377123}
+  platform: {fileID: 6723335967841657835}
+  endHeight: 5
+  speed: 2
 --- !u!1 &6723335967841657833
 GameObject:
   m_ObjectHideFlags: 0
@@ -218,5 +235,5 @@ MonoBehaviour:
   active: 0
   maxElectricalLevel: 100
   currentElectricalLevel: 0
-  rechargeRate: 25
+  rechargeRate: 10
   disrechargeRate: 4
