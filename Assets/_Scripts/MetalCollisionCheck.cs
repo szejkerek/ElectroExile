@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerColliderCheck : MonoBehaviour
+public class MetalCollisionCheck : MonoBehaviour
 {
     // Start is called before the first frame update
 
@@ -22,7 +22,6 @@ public class PlayerColliderCheck : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D other)
     {
-        
         if (other.tag == "Metal")
         {
             isColliding = true;
