@@ -343,7 +343,7 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!70 &5900466589764738031
 CapsuleCollider2D:
@@ -396,6 +396,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxElectricity: 100000
   electricityLevel: 0
+  text: {fileID: 0}
 --- !u!114 &6987965075891760137
 MonoBehaviour:
   m_ObjectHideFlags: 0
