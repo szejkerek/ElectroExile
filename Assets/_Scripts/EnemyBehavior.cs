@@ -16,6 +16,8 @@ public class EnemyBehavior : MonoBehaviour
     [SerializeField] private Transform positionToMove;
     private Vector3 startPosition;
     private Rigidbody2D rb;
+    private Vector3 offset = new Vector3(0.4f,-0.2f,0f);
+    private Vector3 parentOffset = new Vector3(0.6f,0f,0f);
 
     // Start is called before the first frame update
     void Start()
@@ -46,15 +48,22 @@ public class EnemyBehavior : MonoBehaviour
         }
         if (timeOfAbsorb < 0)
         {
-            rb.bodyType = RigidbodyType2D.Dynamic;
-            rb.mass = 10;
-            rb.gravityScale = 1;
-            
+            OnDestrution();
         }
     }
+
+    private void OnDestrution()
+    {
+        timeOfAbsorb = -1;
+        rb.bodyType = RigidbodyType2D.Dynamic;
+        rb.mass = 10;
+        rb.gravityScale = 1;
+        transform.SetParent(null);
+    }
+
     void OnTriggerEnter2D(Collider2D collider)
     {
-        if (collider.gameObject.tag == "PlayerHitbox")
+        if (collider.gameObject.tag == "Player")
         {
             isMoving = false;
         }
@@ -62,16 +71,27 @@ public class EnemyBehavior : MonoBehaviour
 
     void OnTriggerStay2D(Collider2D collider)
     {
-        if (collider.gameObject.tag == "PlayerHitbox")
-        { 
-            //transform.LookAt(collider.gameObject.transform);
+        if (collider.gameObject.tag == "Player" && timeOfAbsorb > 0)
+        {
             var target = collider.gameObject.transform;
-            if(target.position.x > transform.position.x)
-                transform.position = Vector2.MoveTowards(transform.position, target.position - target.right, speed * Time.deltaTime);
+            if (target.position.x > transform.position.x)
+            {
+                transform.position = Vector2.MoveTowards(transform.position, target.position - target.right - offset,
+                    speed * Time.deltaTime);
+                if (transform.position.x >= target.position.x - target.right.x - parentOffset.x)
+                {
+                    transform.SetParent(target);
+                }
+            }
             else
-                transform.position = Vector2.MoveTowards(transform.position, target.position + target.right, speed * Time.deltaTime);
-
-            // transform.position += transform.forward * speed * Time.deltaTime;
+            {
+                transform.position = Vector2.MoveTowards(transform.position, target.position + target.right + offset,
+                    speed * Time.deltaTime);
+                if (transform.position.x <= target.position.x + target.right.x + parentOffset.x)
+                {
+                    transform.SetParent(target);
+                }
+            }
             timeOfAbsorb -= Time.deltaTime;
         }
     }
@@ -79,10 +99,12 @@ public class EnemyBehavior : MonoBehaviour
     void OnCollisionEnter2D(Collision2D collision)
     {
         Debug.Log("lmao");
-        if (collision.gameObject.tag == "PlayerHitbox")
+
+        if (collision.gameObject.tag == "Player" && timeOfAbsorb < 0)
         {
-            rb.AddForce(collision.GetContact(0).normal * 20 );
-            
+            var lol = collision.gameObject.GetComponent<BoxCollider2D>();
+            Physics2D.IgnoreCollision(GetComponent<BoxCollider2D>(),lol);
         }
+        OnDestrution();
     }
 }
