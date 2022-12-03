@@ -18778,7 +18778,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1099904214}
   m_Layer: 0
-  m_Name: Lights
+  m_Name: Lightss
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
