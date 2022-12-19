@@ -26,6 +26,7 @@ public abstract class Singleton<T>: StaticInstance<T> where T : MonoBehaviour
     }
 }
 
+//Singleton class that stay on scene reloads/changes 
 public abstract class PersistentSingleton<T> : Singleton<T> where T : MonoBehaviour
 {
     protected override void Awake()
