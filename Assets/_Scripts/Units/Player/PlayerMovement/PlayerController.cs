@@ -65,8 +65,6 @@ public class PlayerController : MonoBehaviour
                                                                                   _collisionVariables.wallsCheckRadius,
                                                                                   _groundCollision,
                                                                                   _collisionVariables.groundMask) > 0;
-
-        Debug.Log(_isTouchingTerrain[TerrainTypes.RightWall]);
     }
 
     void GatherInputs()
