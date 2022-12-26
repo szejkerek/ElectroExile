@@ -45,3 +45,21 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: TilemapBackground
+    uniqueID: 3024249417
+    locked: 0
+  - name: Collectibles
+    uniqueID: 1060961857
+    locked: 0
+  - name: Enemies
+    uniqueID: 741204313
+    locked: 0
+  - name: Player
+    uniqueID: 3437185659
+    locked: 0
+  - name: TilemapColliders
+    uniqueID: 1779502869
+    locked: 0
+  - name: TilemapForeground
+    uniqueID: 335237521
+    locked: 0
