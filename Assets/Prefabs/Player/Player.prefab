@@ -28,7 +28,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1898123389058725774}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 7.31, y: -2.18, z: -0.116069935}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -121,8 +121,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.03645563, y: 0.004653394}
-  m_Size: {x: 0.6794424, y: 0.96069324}
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 0.6, y: 1}
   m_Direction: 0
 --- !u!114 &3177658157587740738
 MonoBehaviour:
@@ -137,13 +137,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _collisionVariables:
-    drawGizmos: 1
+    drawGizmos: 0
     groundMask:
       serializedVersion: 2
       m_Bits: 8
-    groundCheckOffset: -0.47
-    groundCheckRadius: 0.13
+    groundCheckOffset: -0.5
+    groundCheckRadius: 0.15
     wallsCheckOffset: 0.3
-    wallsCheckRadius: 0.12
-    roofCheckOffset: 0.49
+    wallsCheckRadius: 0.15
+    roofCheckOffset: 0.5
     roofCheckRadius: 0.15
