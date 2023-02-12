@@ -7,64 +7,51 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody2D))]
 public class PlayerController : MonoBehaviour
 {
+    [SerializeField] private CollisionVariables _collisionVariables;
+    public bool IsGrounded { get => _isTouchingTerrain[TerrainTypes.Ground]; }
+
     private Rigidbody2D _rigidbody2D;
     private PlayerInputs _playerInputs;
-    private bool _facingLeft;
+    private bool _facingLeft = false;
     Dictionary<TerrainTypes, bool> _isTouchingTerrain = new Dictionary<TerrainTypes, bool>();
-
-    [Header("Detection")]
-    [SerializeField] private CollisionVariables _collisionVariables;
-
-    public bool IsGrounded { get => _isTouchingTerrain[TerrainTypes.Ground]; }
 
     void Awake()
     {
         _rigidbody2D = GetComponent<Rigidbody2D>();
-        _facingLeft = false;
     }
 
     void Update()
     {
         GatherInputs();
-
         TurnPlayerInWalkingDirection();
-
         CheckForTerrainCollisions();
-        
     }
-
+    
     private readonly Collider2D[] _groundCollision = new Collider2D[1];
     private readonly Collider2D[] _leftWallCollision = new Collider2D[1];
     private readonly Collider2D[] _rightWallCollision = new Collider2D[1];
     private readonly Collider2D[] _roofCollision = new Collider2D[1];
     private Vector3 overlapOffset = new Vector3(0, 0, 0);
-
     private void CheckForTerrainCollisions()
     {
         overlapOffset.y = _collisionVariables.groundCheckOffset;
-        _isTouchingTerrain[TerrainTypes.Ground] = Physics2D.OverlapCircleNonAlloc(transform.position + overlapOffset,
-                                                                                  _collisionVariables.groundCheckRadius,
-                                                                                  _groundCollision,
-                                                                                  _collisionVariables.groundMask) > 0;
+        _isTouchingTerrain[TerrainTypes.Ground] = CheckForOverlap(_collisionVariables.groundCheckRadius, _groundCollision);
 
         overlapOffset.y = _collisionVariables.roofCheckOffset;
-        _isTouchingTerrain[TerrainTypes.Roof] = Physics2D.OverlapCircleNonAlloc(transform.position + overlapOffset,
-                                                                                  _collisionVariables.roofCheckRadius,
-                                                                                  _roofCollision,
-                                                                                  _collisionVariables.groundMask) > 0;
+        _isTouchingTerrain[TerrainTypes.Roof] = CheckForOverlap(_collisionVariables.roofCheckRadius,_roofCollision);
 
         overlapOffset.y = 0;
         overlapOffset.x = _collisionVariables.wallsCheckOffset;
-        _isTouchingTerrain[TerrainTypes.RightWall] = Physics2D.OverlapCircleNonAlloc(transform.position + overlapOffset,
-                                                                                  _collisionVariables.wallsCheckRadius,
-                                                                                  _groundCollision,
-                                                                                  _collisionVariables.groundMask) > 0;
+        _isTouchingTerrain[TerrainTypes.RightWall] = CheckForOverlap(_collisionVariables.wallsCheckRadius,_groundCollision);
 
         overlapOffset.x = -_collisionVariables.wallsCheckOffset;
-        _isTouchingTerrain[TerrainTypes.LeftWall] = Physics2D.OverlapCircleNonAlloc(transform.position + overlapOffset,
-                                                                                  _collisionVariables.wallsCheckRadius,
-                                                                                  _groundCollision,
-                                                                                  _collisionVariables.groundMask) > 0;
+        _isTouchingTerrain[TerrainTypes.LeftWall] = CheckForOverlap(_collisionVariables.wallsCheckRadius, _groundCollision);
+        overlapOffset.x = 0;
+
+        bool CheckForOverlap(float checkRadius, Collider2D[] result)
+        {
+            return Physics2D.OverlapCircleNonAlloc(transform.position + overlapOffset, checkRadius, result, _collisionVariables.groundMask) > 0;
+        }
     }
 
     void GatherInputs()
@@ -89,6 +76,7 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    #region Gizmos
     void DrawTerrainCollisionsGizmos()
     {
         if (!_collisionVariables.drawGizmos)
@@ -105,21 +93,11 @@ public class PlayerController : MonoBehaviour
     {
         DrawTerrainCollisionsGizmos();
     }
+    #endregion
 
-    struct PlayerInputs
-    {
-        public float X, Y;
-        public int RawX, RawY;
-    }
-
-    enum TerrainTypes
-    {
-        Ground,
-        LeftWall,
-        RightWall,
-        Roof
-    }
 }
+
+#region Structures
 
 [System.Serializable]
 public struct CollisionVariables
@@ -136,3 +114,21 @@ public struct CollisionVariables
     public float roofCheckOffset;
     public float roofCheckRadius;
 }
+
+[System.Serializable]
+struct PlayerInputs
+{
+    public float X, Y;
+    public int RawX, RawY;
+}
+
+[System.Serializable]
+enum TerrainTypes
+{
+    Ground,
+    LeftWall,
+    RightWall,
+    Roof
+}
+
+#endregion
