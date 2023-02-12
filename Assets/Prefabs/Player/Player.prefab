@@ -147,3 +147,7 @@ MonoBehaviour:
     wallsCheckRadius: 0.15
     roofCheckOffset: 0.5
     roofCheckRadius: 0.15
+  _movementVariables:
+    walkSpeed: 4
+    acceleration: 2
+    currentMovementLerpSpeed: 100

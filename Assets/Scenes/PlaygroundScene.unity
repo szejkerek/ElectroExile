@@ -3296,9 +3296,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 3177658157587740738, guid: fcdc3ee581dea074cab444f50d9d3468, type: 3}
+      propertyPath: <IsGrounded>k__BackingField
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3177658157587740738, guid: fcdc3ee581dea074cab444f50d9d3468, type: 3}
+      propertyPath: _collisionVariables.drawGizmos
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3177658157587740749, guid: fcdc3ee581dea074cab444f50d9d3468, type: 3}
       propertyPath: m_RootOrder
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3177658157587740749, guid: fcdc3ee581dea074cab444f50d9d3468, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.044
       objectReference: {fileID: 0}
     - target: {fileID: 3177658157587740749, guid: fcdc3ee581dea074cab444f50d9d3468, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x

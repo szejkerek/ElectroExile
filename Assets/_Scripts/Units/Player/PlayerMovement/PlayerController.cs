@@ -1,14 +1,11 @@
 using System;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
-
 
 [RequireComponent(typeof(Rigidbody2D))]
 public class PlayerController : MonoBehaviour
 {
     [SerializeField] private CollisionVariables _collisionVariables;
-    public bool IsGrounded { get => _isTouchingTerrain[TerrainTypes.Ground]; }
 
     private Rigidbody2D _rigidbody2D;
     private PlayerInputs _playerInputs;
@@ -23,37 +20,10 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         GatherInputs();
-        TurnPlayerInWalkingDirection();
-        CheckForTerrainCollisions();
+        HandlePlayerDirection();
+        HandleWallInteractions();
+        HandleMovement();
     }
-    
-    private readonly Collider2D[] _groundCollision = new Collider2D[1];
-    private readonly Collider2D[] _leftWallCollision = new Collider2D[1];
-    private readonly Collider2D[] _rightWallCollision = new Collider2D[1];
-    private readonly Collider2D[] _roofCollision = new Collider2D[1];
-    private Vector3 overlapOffset = new Vector3(0, 0, 0);
-    private void CheckForTerrainCollisions()
-    {
-        overlapOffset.y = _collisionVariables.groundCheckOffset;
-        _isTouchingTerrain[TerrainTypes.Ground] = CheckForOverlap(_collisionVariables.groundCheckRadius, _groundCollision);
-
-        overlapOffset.y = _collisionVariables.roofCheckOffset;
-        _isTouchingTerrain[TerrainTypes.Roof] = CheckForOverlap(_collisionVariables.roofCheckRadius,_roofCollision);
-
-        overlapOffset.y = 0;
-        overlapOffset.x = _collisionVariables.wallsCheckOffset;
-        _isTouchingTerrain[TerrainTypes.RightWall] = CheckForOverlap(_collisionVariables.wallsCheckRadius,_groundCollision);
-
-        overlapOffset.x = -_collisionVariables.wallsCheckOffset;
-        _isTouchingTerrain[TerrainTypes.LeftWall] = CheckForOverlap(_collisionVariables.wallsCheckRadius, _groundCollision);
-        overlapOffset.x = 0;
-
-        bool CheckForOverlap(float checkRadius, Collider2D[] result)
-        {
-            return Physics2D.OverlapCircleNonAlloc(transform.position + overlapOffset, checkRadius, result, _collisionVariables.groundMask) > 0;
-        }
-    }
-
     void GatherInputs()
     {
         _playerInputs.RawX = (int)Input.GetAxisRaw("Horizontal");
@@ -62,7 +32,7 @@ public class PlayerController : MonoBehaviour
         _playerInputs.Y = Input.GetAxis("Vertical");
     }
 
-    void TurnPlayerInWalkingDirection()
+    void HandlePlayerDirection()
     {
         _facingLeft = _playerInputs.RawX != 1 && (_playerInputs.RawX == -1 || _facingLeft);
 
@@ -75,6 +45,91 @@ public class PlayerController : MonoBehaviour
             transform.rotation = Quaternion.Euler(0, 0, 0);
         }
     }
+
+    #region Wall Interactions
+
+    public bool IsGrounded { get; private set; }
+    public event Action OnGroundTouched;
+
+    private readonly Collider2D[] _groundCollision = new Collider2D[1];
+    private readonly Collider2D[] _leftWallCollision = new Collider2D[1];
+    private readonly Collider2D[] _rightWallCollision = new Collider2D[1];
+    private readonly Collider2D[] _roofCollision = new Collider2D[1];
+    private Vector3 _overlapOffset = new Vector3(0, 0, 0);
+    bool _isPushingLeftWall, _isPushingRightWall, _isPushingRoof;
+
+    private void CheckForTerrainCollisions()
+    {
+        _overlapOffset.y = _collisionVariables.groundCheckOffset;
+        _isTouchingTerrain[TerrainTypes.Ground] = CheckForOverlap(_collisionVariables.groundCheckRadius, _groundCollision);
+
+        _overlapOffset.y = _collisionVariables.roofCheckOffset;
+        _isTouchingTerrain[TerrainTypes.Roof] = CheckForOverlap(_collisionVariables.roofCheckRadius,_roofCollision);
+
+        _overlapOffset.y = 0;
+        _overlapOffset.x = _collisionVariables.wallsCheckOffset;
+        _isTouchingTerrain[TerrainTypes.RightWall] = CheckForOverlap(_collisionVariables.wallsCheckRadius,_groundCollision);
+
+        _overlapOffset.x = -_collisionVariables.wallsCheckOffset;
+        _isTouchingTerrain[TerrainTypes.LeftWall] = CheckForOverlap(_collisionVariables.wallsCheckRadius, _groundCollision);
+        _overlapOffset.x = 0;
+
+        bool CheckForOverlap(float checkRadius, Collider2D[] result)
+        {
+            return Physics2D.OverlapCircleNonAlloc(transform.position + _overlapOffset, checkRadius, result, _collisionVariables.groundMask) > 0;
+        }
+    }
+
+    void HandleWallInteractions()
+    {
+        CheckForTerrainCollisions();
+
+        if(!IsGrounded && _isTouchingTerrain[TerrainTypes.Ground])
+        {
+            IsGrounded = true;
+            OnGroundTouched?.Invoke();
+        }
+
+        if (IsGrounded && !_isTouchingTerrain[TerrainTypes.Ground])
+        {
+            IsGrounded = false;
+        }
+
+        _isPushingLeftWall  = _isTouchingTerrain[TerrainTypes.LeftWall]  && _playerInputs.X < 0;
+        _isPushingRightWall = _isTouchingTerrain[TerrainTypes.RightWall] && _playerInputs.X > 0;
+        _isPushingRoof      = _isTouchingTerrain[TerrainTypes.Roof]      && _playerInputs.Y > 0;
+    }
+
+    #endregion
+
+    [SerializeField] MovementVariables _movementVariables;
+
+    void HandleMovement()
+    {
+        HandleChangingDirection();
+        Vector3 desiredVelocity = new Vector3(_playerInputs.X * _movementVariables.walkSpeed, _rigidbody2D.velocity.y);
+        _rigidbody2D.velocity = Vector3.MoveTowards(_rigidbody2D.velocity, desiredVelocity, _movementVariables.currentMovementLerpSpeed * Time.deltaTime);
+    }
+
+    void HandleChangingDirection()
+    {
+        float calculatedAcceleration = IsGrounded ? _movementVariables.acceleration : _movementVariables.acceleration * 0.5f;
+        if (_playerInputs.RawX == -1)
+        {
+            if (_rigidbody2D.velocity.x > 0) _playerInputs.X = 0;
+            _playerInputs.X = Mathf.MoveTowards(_playerInputs.X, -1, calculatedAcceleration * Time.deltaTime);
+        }
+        else if(_playerInputs.RawX == 1)
+        {
+            if (_rigidbody2D.velocity.x < 0) _playerInputs.X = 0;
+            _playerInputs.X = Mathf.MoveTowards(_playerInputs.X, 1, calculatedAcceleration * Time.deltaTime);
+        }
+        else
+        {
+            _playerInputs.X = Mathf.MoveTowards(_playerInputs.X, 0, calculatedAcceleration * 2 * Time.deltaTime);
+        }
+    }
+
 
     #region Gizmos
     void DrawTerrainCollisionsGizmos()
@@ -113,6 +168,14 @@ public struct CollisionVariables
     [Space]
     public float roofCheckOffset;
     public float roofCheckRadius;
+}
+
+[System.Serializable]
+public struct MovementVariables
+{
+    public float walkSpeed;
+    public float acceleration;
+    public float currentMovementLerpSpeed;
 }
 
 [System.Serializable]
