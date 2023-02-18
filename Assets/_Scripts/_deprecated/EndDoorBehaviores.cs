@@ -4,6 +4,10 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+/// <summary>
+/// <c>EndDoorBehaviores</c> is deprecated.
+/// DO NOT USE!!!
+/// </summary>
 public class EndDoorBehaviores : MonoBehaviour
 {
     void Start()

@@ -2,6 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// <c>RechargableObject</c> is deprecated.
+/// DO NOT USE!!!
+/// </summary>
 public class RechargableObject : MonoBehaviour
 {
 
@@ -63,6 +67,10 @@ public class RechargableObject : MonoBehaviour
         }      
     }
 
+    /// <summary>
+    /// <c>Recharge</c> is deprecated.
+    /// DO NOT USE!!!
+    /// </summary>
     private void Recharge()
     {
         playerElectricity.DecrementEL(electricalCost);
@@ -75,6 +83,10 @@ public class RechargableObject : MonoBehaviour
      
     }
 
+    /// <summary>
+    /// <c>Discharge</c> is deprecated.
+    /// DO NOT USE!!!
+    /// </summary>
     private void Discharge()
     {
         if(CurrentElectricalLevel <= 0) 

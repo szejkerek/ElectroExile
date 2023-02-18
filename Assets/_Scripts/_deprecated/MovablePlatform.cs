@@ -3,6 +3,10 @@ using System.Collections.Generic;
 using System.Runtime.InteropServices;
 using UnityEngine;
 
+/// <summary>
+/// <c>MovablePlatform</c> is deprecated.
+/// DO NOT USE!!!
+/// </summary>
 public class MovablePlatform : MonoBehaviour
 {
     [SerializeField] private float electricalDecrement;

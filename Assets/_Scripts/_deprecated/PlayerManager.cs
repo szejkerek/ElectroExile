@@ -4,6 +4,10 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+/// <summary>
+/// <c>PlayerManager</c> is deprecated.
+/// DO NOT USE!!!
+/// </summary>
 public class PlayerManager : MonoBehaviour
 {
     public bool canWin = true;
@@ -15,7 +19,10 @@ public class PlayerManager : MonoBehaviour
         varlE = GetComponent<PlayerElectricity>();
     }
 
-
+    /// <summary>
+    /// <c>KillPlayer</c> is deprecated.
+    /// DO NOT USE!!!
+    /// </summary>
     public void KillPlayer()
     {
         canWin = false;

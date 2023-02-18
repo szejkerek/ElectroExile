@@ -4,6 +4,10 @@ using TMPro;
 using UnityEngine;
 using static UnityEngine.GraphicsBuffer;
 
+/// <summary>
+/// <c>NewPlayerMovement</c> is deprecated.
+/// DO NOT USE!!!
+/// </summary>
 public class NewPlayerMovement : MonoBehaviour
 {
     [SerializeField] private float electricityCost = 1f;

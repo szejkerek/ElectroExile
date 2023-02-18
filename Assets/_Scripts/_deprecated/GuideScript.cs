@@ -3,6 +3,10 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
+/// <summary>
+/// <c>GuideScript</c> is deprecated.
+/// DO NOT USE!!!
+/// </summary>
 public class GuideScript : MonoBehaviour
 {
     [SerializeField] private TextMeshPro text;

@@ -8,7 +8,10 @@ using UnityEngine.SceneManagement;
 using Vector2 = UnityEngine.Vector2;
 using Vector3 = UnityEngine.Vector3;
 
-
+/// <summary>
+/// <c>EnemyBehavior</c> is deprecated.
+/// DO NOT USE!!!
+/// </summary>
 public class EnemyBehavior : MonoBehaviour
 {
     [SerializeField] private bool isMoving = false;

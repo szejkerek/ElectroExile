@@ -2,6 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// <c>MovableBlock</c> is deprecated.
+/// DO NOT USE!!!
+/// </summary>
 public class MovableBlock : MonoBehaviour
 {
     [SerializeField] RechargableObject ro;

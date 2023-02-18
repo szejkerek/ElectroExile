@@ -3,6 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
+/// <summary>
+/// <c>Guide</c> is deprecated.
+/// DO NOT USE!!!
+/// </summary>
 public class Guide : MonoBehaviour
 {
     [SerializeField] private float durationOfText = 2;

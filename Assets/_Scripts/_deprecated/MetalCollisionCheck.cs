@@ -2,6 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// <c>MetalCollisionCheck</c> is deprecated.
+/// DO NOT USE!!!
+/// </summary>
 public class MetalCollisionCheck : MonoBehaviour
 {
     // Start is called before the first frame update

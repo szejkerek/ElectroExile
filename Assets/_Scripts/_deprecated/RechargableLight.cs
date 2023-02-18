@@ -3,6 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Rendering.Universal;
 
+/// <summary>
+/// <c>RechargableLight</c> is deprecated.
+/// DO NOT USE!!!
+/// </summary>
 public class RechargableLight : MonoBehaviour
 {
     [Range(0f, 1f)]

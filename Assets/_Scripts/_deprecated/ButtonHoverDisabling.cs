@@ -4,6 +4,10 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
+/// <summary>
+/// <c>ButtonHoverDisabling</c> is deprecated.
+/// DO NOT USE!!!
+/// </summary>
 public class ButtonHoverDisabling : MonoBehaviour, IPointerEnterHandler
 {
     [SerializeField] public List<Button> ButtonsToBeDisabled;

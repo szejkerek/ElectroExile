@@ -3,6 +3,10 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
+/// <summary>
+/// <c>PlayerElectricity</c> is deprecated.
+/// DO NOT USE!!!
+/// </summary>
 public class PlayerElectricity : MonoBehaviour
 {
     [SerializeField] private float maxElectricity = 100;
@@ -18,16 +22,28 @@ public class PlayerElectricity : MonoBehaviour
     }
     public float ElectricityLevel { get => electricityLevel;  }
 
+    /// <summary>
+    /// <c>RestoreEL</c> is deprecated.
+    /// DO NOT USE!!!
+    /// </summary>
     public void RestoreEL()
     {
         electricityLevel = maxElectricity;
     }
 
+    /// <summary>
+    /// <c>ZeroEL</c> is deprecated.
+    /// DO NOT USE!!!
+    /// </summary>
     public void ZeroEL()
     {
         electricityLevel = 0;
     }
 
+    /// <summary>
+    /// <c>DecrementEL</c> is deprecated.
+    /// DO NOT USE!!!
+    /// </summary>
     public void DecrementEL(float value)
     {
         electricityLevel -= value * Time.deltaTime;
@@ -38,6 +54,10 @@ public class PlayerElectricity : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// <c>IncrementEL</c> is deprecated.
+    /// DO NOT USE!!!
+    /// </summary>
     public void IncrementEL(float value)
     {
         electricityLevel += value * Time.deltaTime;
