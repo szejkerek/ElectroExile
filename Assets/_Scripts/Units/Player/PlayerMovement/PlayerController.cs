@@ -20,9 +20,10 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         GatherInputs();
-        HandlePlayerDirection();
-        HandleWallInteractions();
-        HandleMovement();
+        PlayerDirection();
+        WallInteractions();
+        Walking();
+        Jumping();
     }
     void GatherInputs()
     {
@@ -30,20 +31,6 @@ public class PlayerController : MonoBehaviour
         _playerInputs.RawY = (int)Input.GetAxisRaw("Vertical");
         _playerInputs.X = Input.GetAxis("Horizontal");
         _playerInputs.Y = Input.GetAxis("Vertical");
-    }
-
-    void HandlePlayerDirection()
-    {
-        _facingLeft = _playerInputs.RawX != 1 && (_playerInputs.RawX == -1 || _facingLeft);
-
-        if (_facingLeft)
-        {
-            transform.rotation = Quaternion.Euler(0, -180, 0);
-        }
-        else
-        {
-            transform.rotation = Quaternion.Euler(0, 0, 0);
-        }
     }
 
     #region Wall Interactions
@@ -80,18 +67,20 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    void HandleWallInteractions()
+    void WallInteractions()
     {
         CheckForTerrainCollisions();
 
         if(!IsGrounded && _isTouchingTerrain[TerrainTypes.Ground])
         {
             IsGrounded = true;
+            _hasJumped = false;
             OnGroundTouched?.Invoke();
         }
 
         if (IsGrounded && !_isTouchingTerrain[TerrainTypes.Ground])
         {
+            _timeLeftGrounded = Time.time;
             IsGrounded = false;
         }
 
@@ -100,11 +89,26 @@ public class PlayerController : MonoBehaviour
         _isPushingRoof      = _isTouchingTerrain[TerrainTypes.Roof]      && _playerInputs.Y > 0;
     }
 
+    void PlayerDirection()
+    {
+        _facingLeft = _playerInputs.RawX != 1 && (_playerInputs.RawX == -1 || _facingLeft);
+
+        if (_facingLeft)
+        {
+            transform.rotation = Quaternion.Euler(0, -180, 0);
+        }
+        else
+        {
+            transform.rotation = Quaternion.Euler(0, 0, 0);
+        }
+    }
+
     #endregion
 
+    #region Walking
     [SerializeField] MovementVariables _movementVariables;
 
-    void HandleMovement()
+    void Walking()
     {
         HandleChangingDirection();
         Vector3 desiredVelocity = new Vector3(_playerInputs.X * _movementVariables.walkSpeed, _rigidbody2D.velocity.y);
@@ -116,12 +120,12 @@ public class PlayerController : MonoBehaviour
         float calculatedAcceleration = IsGrounded ? _movementVariables.acceleration : _movementVariables.acceleration * 0.5f;
         if (_playerInputs.RawX == -1)
         {
-            if (_rigidbody2D.velocity.x > 0) _playerInputs.X = 0;
+            if (_rigidbody2D.velocity.x > 0) _playerInputs.X = 0; //Instant stop
             _playerInputs.X = Mathf.MoveTowards(_playerInputs.X, -1, calculatedAcceleration * Time.deltaTime);
         }
         else if(_playerInputs.RawX == 1)
         {
-            if (_rigidbody2D.velocity.x < 0) _playerInputs.X = 0;
+            if (_rigidbody2D.velocity.x < 0) _playerInputs.X = 0; //Instant stop
             _playerInputs.X = Mathf.MoveTowards(_playerInputs.X, 1, calculatedAcceleration * Time.deltaTime);
         }
         else
@@ -129,7 +133,35 @@ public class PlayerController : MonoBehaviour
             _playerInputs.X = Mathf.MoveTowards(_playerInputs.X, 0, calculatedAcceleration * 2 * Time.deltaTime);
         }
     }
+    #endregion
 
+    [SerializeField] JumpingVariables jumpingVariables;
+    private float _timeLeftGrounded;
+    private bool  _hasJumped;
+    void Jumping()
+    {
+        if(Input.GetKeyDown(jumpingVariables.jumpButton))
+        {
+            if(IsGrounded || Time.time < _timeLeftGrounded + jumpingVariables.coyoteTime)
+            {
+                if (!_hasJumped)
+                {
+                    ExecuteJump(new Vector2(_rigidbody2D.velocity.x, jumpingVariables.jumpForce));
+                }
+            }
+        }
+
+        if (_rigidbody2D.velocity.y < jumpingVariables.jumpVelocityFalloff || _rigidbody2D.velocity.y > 0 && !Input.GetKey(jumpingVariables.jumpButton))
+        {
+            _rigidbody2D.velocity += jumpingVariables.fallMultiplier * Physics.gravity.y * Vector2.up * Time.deltaTime;
+        }
+    }
+
+    void ExecuteJump(Vector2 dir)
+    {
+        _rigidbody2D.velocity = dir;
+        _hasJumped = true;
+    }
 
     #region Gizmos
     void DrawTerrainCollisionsGizmos()
@@ -153,6 +185,16 @@ public class PlayerController : MonoBehaviour
 }
 
 #region Structures
+
+[System.Serializable]
+public struct JumpingVariables
+{
+    public KeyCode jumpButton;
+    public float jumpForce;
+    public float fallMultiplier;
+    public float jumpVelocityFalloff;
+    public float coyoteTime;
+}
 
 [System.Serializable]
 public struct CollisionVariables

@@ -137,7 +137,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _collisionVariables:
-    drawGizmos: 0
+    drawGizmos: 1
     groundMask:
       serializedVersion: 2
       m_Bits: 8
@@ -151,3 +151,9 @@ MonoBehaviour:
     walkSpeed: 4
     acceleration: 2
     currentMovementLerpSpeed: 100
+  jumpingVariables:
+    jumpButton: 32
+    jumpForce: 6
+    fallMultiplier: 3
+    jumpVelocityFalloff: 2
+    coyoteTime: 0.2
