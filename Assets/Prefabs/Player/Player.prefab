@@ -154,6 +154,6 @@ MonoBehaviour:
   jumpingVariables:
     jumpButton: 32
     jumpForce: 6
-    fallMultiplier: 3
-    jumpVelocityFalloff: 2
+    fallMultiplier: 4
+    jumpVelocityFalloff: 2.87
     coyoteTime: 0.2
