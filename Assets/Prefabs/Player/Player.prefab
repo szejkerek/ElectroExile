@@ -122,7 +122,7 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_Size: {x: 0.6, y: 1}
+  m_Size: {x: 0.7, y: 0.95}
   m_Direction: 0
 --- !u!114 &3177658157587740738
 MonoBehaviour:
@@ -141,18 +141,19 @@ MonoBehaviour:
     groundMask:
       serializedVersion: 2
       m_Bits: 8
-    groundCheckOffset: -0.45
-    groundCheckRadius: 0.2
-    wallsCheckOffset: 0.3
-    wallsCheckRadius: 0.15
+    groundCheckOffset: -0.5
+    groundCheckRadius: 0.1
+    wallsCheckOffset: 0.35
+    wallsCheckRadius: 0.12
     roofCheckOffset: 0.5
-    roofCheckRadius: 0.15
+    roofCheckRadius: 0.1
   _movementVariables:
     walkSpeed: 4
     acceleration: 2
     currentMovementLerpSpeed: 100
   jumpingVariables:
     jumpButton: 32
+    hitHeadJumpCooldown: 0.4
     jumpForce: 10
     fallMultiplier: 3
     jumpVelocityFalloff: 8
