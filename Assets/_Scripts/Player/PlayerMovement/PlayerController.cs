@@ -84,7 +84,6 @@ public class PlayerController : MonoBehaviour
             IsGrounded = false;
         }
 
-        Debug.Log($"IsGrounded: {IsGrounded}   _hasJumped {_hasJumped}  _timeLeftGrounded {_timeLeftGrounded}");
         _isPushingLeftWall  = _isTouchingTerrain[TerrainTypes.LeftWall]  && _playerInputs.X < 0;
         _isPushingRightWall = _isTouchingTerrain[TerrainTypes.RightWall] && _playerInputs.X > 0;
         _isPushingRoof      = _isTouchingTerrain[TerrainTypes.Roof]      && _playerInputs.Y > 0;
