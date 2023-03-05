@@ -7,11 +7,11 @@ public class DeveloperOptions
 {
     private const string _developerFolder = "Developer/";
 
-    [MenuItem(_developerFolder + "Test")]
-    public static void Test()
+    [MenuItem(_developerFolder + "Player/Teleport to spawnpoint")]
+    public static void TeleportToSpawnPoint()
     {
-        AudioManager.Instance.PlaySound(AudioManager.Instance.SFXLib.TestSound);
-        Debug.Log("Test");
+        Vector2 spawnpointPosition = SpawnPoint.Instance.transform.position;
+        Player.Instance.transform.position = spawnpointPosition;
     }
 }
 
