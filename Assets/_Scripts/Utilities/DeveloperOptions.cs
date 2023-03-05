@@ -13,8 +13,7 @@ public class DeveloperOptions : MonoBehaviour
     [MenuItem(_developerFolder + "Player/Teleport to spawnpoint")]
     public static void TeleportToSpawnPoint()
     {
-        Vector2 spawnpointPosition = SpawnPoint.Instance.transform.position;
-        Player.Instance.transform.position = spawnpointPosition;
+        Player.Instance.MoveToSpawnPoint();
     }
 
 #endif
