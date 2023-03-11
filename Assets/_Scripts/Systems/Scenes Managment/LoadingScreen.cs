@@ -1,6 +1,5 @@
 using DG.Tweening;
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -21,9 +20,7 @@ public class LoadingScreen : MonoBehaviour
     private CanvasGroup loadingScreenCG;
     private CanvasGroup progressBarCG;
 
-    private Tween loadingScreenTween;
-    private Tween progressBarTween;
-
+    Sequence seq;
     public float ProgressValue
     {
       get { return progressBar.value; }
@@ -32,51 +29,36 @@ public class LoadingScreen : MonoBehaviour
 
     private void Awake()
     {
+        
         progressBar = GetComponentInChildren<Slider>();
         loadingScreenCG = GetComponent<CanvasGroup>();
         progressBarCG = progressBar.GetComponent<CanvasGroup>();
      }
 
-    public IEnumerator FadeIn(bool showProgressBar = true)
+    public float FadeIn(bool showProgressBar = true)
     {
-        Fade(loadingScreenTween, loadingScreenCG, 1, fadeInDuration);
-        if (showProgressBar)
-        {
-            StartCoroutine(FadeInProgressBarCorutine());
-        }
-        yield return null;
+        seq = DOTween.Sequence();
+        progressBarCG.alpha = 0;
+        seq.Append(loadingScreenCG.DOFade(1, fadeInDuration));
+        seq.AppendInterval(progressBarDelay);
+        seq.Append(progressBarCG.DOFade(1, fadeInProgressBarDuration));
+        return fadeInDuration;
     }
 
-    public IEnumerator FadeOut()
+    public void FadeOut()
     {
-        StartCoroutine(FadeOutProgressBarCorutine());
-        Fade(loadingScreenTween, loadingScreenCG, 0, fadeOutDuration);
-        yield return null;
+        seq.Kill();
+        seq = DOTween.Sequence();
+        seq.Append(progressBarCG.DOFade(0, fadeOutProgressBarDuration));
+        seq.Append(loadingScreenCG.DOFade(0, fadeOutDuration));
     }
 
-    private IEnumerator FadeInProgressBarCorutine()
-    {
-        yield return new WaitForSeconds(fadeInDuration + progressBarDelay);
-        Fade(progressBarTween, progressBarCG, 1, fadeInProgressBarDuration);
-        yield return new WaitForSeconds(fadeInProgressBarDuration);
-    }
 
-    private IEnumerator FadeOutProgressBarCorutine()
-    {
-        Fade(progressBarTween, progressBarCG, 0, fadeOutProgressBarDuration);
-        yield return new WaitForSeconds(fadeOutProgressBarDuration);
-    }
-
-    private void Fade(Tween tween, CanvasGroup canvasGroup, float endValue, float duration, TweenCallback onFadeCompleted = null, TweenCallback onFadeStarted = null)
-    {
-        if (tween is not null)
-        {
-            tween.Kill(false);
-        }
-
-        tween = canvasGroup.DOFade(endValue, duration);
-
-        tween.onPlay += onFadeStarted;
-        tween.onComplete += onFadeCompleted;
+    private void Fade(Sequence tween, CanvasGroup canvasGroup, float endValue, float duration, float delay = 0f)
+    {   
+        tween.Kill(false);
+        tween = DOTween.Sequence();
+        tween.AppendInterval(delay);
+        tween.Append(canvasGroup.DOFade(endValue, duration));
     }
 }

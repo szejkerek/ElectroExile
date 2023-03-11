@@ -172,7 +172,7 @@ CanvasGroup:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3628997795530940614}
   m_Enabled: 1
-  m_Alpha: 1
+  m_Alpha: 0
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
@@ -256,10 +256,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 149c6bafbddb73347a8d8075ae0a4324, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fadeInDuration: 0.25
-  fadeOutDuration: 0.25
-  progressBarDelay: 2
-  fadeInProgressBarDuration: 3
+  fadeInDuration: 1
+  fadeOutDuration: 1
+  progressBarDelay: 3
+  fadeInProgressBarDuration: 2
   fadeOutProgressBarDuration: 0.5
 --- !u!1 &5852097501811307358
 GameObject:

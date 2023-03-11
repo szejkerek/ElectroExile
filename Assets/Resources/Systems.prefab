@@ -117,10 +117,6 @@ PrefabInstance:
       propertyPath: m_Value
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 3994255658624130329, guid: a71856e07c0d3be43981178df2766553, type: 3}
-      propertyPath: m_Alpha
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 4815188912881463969, guid: a71856e07c0d3be43981178df2766553, type: 3}
       propertyPath: m_Alpha
       value: 0.97
@@ -184,6 +180,10 @@ PrefabInstance:
     - target: {fileID: 6535721214693610765, guid: a71856e07c0d3be43981178df2766553, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7092737661388921718, guid: a71856e07c0d3be43981178df2766553, type: 3}
+      propertyPath: m_Name
+      value: LoadingScreen
       objectReference: {fileID: 0}
     - target: {fileID: 7092737661388921718, guid: a71856e07c0d3be43981178df2766553, type: 3}
       propertyPath: m_IsActive
