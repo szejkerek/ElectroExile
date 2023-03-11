@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 802948797682935968}
   - component: {fileID: 3177658157587740739}
   - component: {fileID: 3177658157587740748}
+  - component: {fileID: 3780442550504351060}
   - component: {fileID: 3177658157587740738}
   m_Layer: 0
   m_Name: Player
@@ -117,13 +118,25 @@ CapsuleCollider2D:
   m_GameObject: {fileID: 1898123389058725774}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: a85ea67512c3cbe448af918aebaa447e, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_Size: {x: 0.6, y: 1}
+  m_Size: {x: 0.7, y: 0.95}
   m_Direction: 0
+--- !u!114 &3780442550504351060
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1898123389058725774}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f486616bdd661324fbc9ea9f06d190c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &3177658157587740738
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -137,17 +150,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _collisionVariables:
-    drawGizmos: 0
+    drawGizmos: 1
     groundMask:
       serializedVersion: 2
       m_Bits: 8
     groundCheckOffset: -0.5
-    groundCheckRadius: 0.15
-    wallsCheckOffset: 0.3
-    wallsCheckRadius: 0.15
+    groundCheckRadius: 0.1
+    wallsCheckOffset: 0.35
+    wallsCheckRadius: 0.12
     roofCheckOffset: 0.5
-    roofCheckRadius: 0.15
+    roofCheckRadius: 0.1
   _movementVariables:
     walkSpeed: 4
     acceleration: 2
     currentMovementLerpSpeed: 100
+  jumpingVariables:
+    jumpButton: 32
+    hitHeadJumpCooldown: 0.4
+    jumpForce: 10
+    fallMultiplier: 3
+    jumpVelocityFalloff: 8
+    coyoteTime: 0.2

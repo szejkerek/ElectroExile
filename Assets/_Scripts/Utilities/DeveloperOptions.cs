@@ -3,15 +3,19 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
 
-public class DeveloperOptions
+public class DeveloperOptions : MonoBehaviour
 {
+//Keep all dev options here to be able to create builds
+#if UNITY_EDITOR
+
     private const string _developerFolder = "Developer/";
 
-    [MenuItem(_developerFolder + "Test")]
-    public static void Test()
+    [MenuItem(_developerFolder + "Player/Teleport to spawnpoint")]
+    public static void TeleportToSpawnPoint()
     {
-        AudioManager.Instance.PlaySound(AudioManager.Instance.SFXLib.TestSound);
-        Debug.Log("Test");
+        Player.Instance.MoveToSpawnPoint();
     }
+
+#endif
 }
 
