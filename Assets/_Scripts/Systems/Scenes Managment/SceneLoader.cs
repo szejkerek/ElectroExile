@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SceneLoader : Singleton<SceneLoader>
 {
-    public BasicLoadingScreen bls;
+    public LoadingScreen bls;
 
     private void Start()
     {
@@ -15,10 +15,10 @@ public class SceneLoader : Singleton<SceneLoader>
     {
         while (true)
         {
-            bls.FadeOut();
-            yield return new WaitForSeconds(15);
-            bls.FadeIn();
-            yield return new WaitForSeconds(15);
+            StartCoroutine(bls.FadeOut());
+            yield return new WaitForSeconds(10);
+            StartCoroutine(bls.FadeIn());
+            yield return new WaitForSeconds(10);
         }
     }
 
