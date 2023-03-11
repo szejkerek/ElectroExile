@@ -20,7 +20,7 @@ public class SoundVolumeChanging : MonoBehaviour
         AudioListener.volume = PlayerPrefs.GetFloat("musicVolume");
     }
 
-    SoundVolumeChanging sv = new SoundVolumeChanging();
+    //SoundVolumeChanging sv = new SoundVolumeChanging();
 
     /// <summary>
     /// <c>MusicVolumeUp</c> is deprecated.
